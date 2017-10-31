@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+
+}
+
+.col-container {
+  display: flex;
+  width: 100%;
+}
+
+.col {
+  display: table-cell;
+  padding: 20px;
+}
+
+.sidebar-block {
+  width: 30%;
+  background-color: lightblue;
+}
+
+.projects-block {
+  width: 70%;
+  background-color: lightgreen;
+}
+
+.footer {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  display: table;
+  text-align: center;
+  background-color: burlywood;
+}
+
+@media only screen and (max-width: 767px) {
+.col-container {
+  display: table;
+}
+  .col {
+    display: block;
+    width: 100%;
+  }
+}
+
+//
+//.container {
+//  max-width: 600px;
+//  width: 100%;
+//  margin: auto;
+//  background: #eee;
+//
+//
+//  .sidebar, .main {
+//    padding: 10px;
+//  }
+//
+//  .main {
+//    margin-left: 200px;
+//    min-height: 100vh;
+//    border-left: 2px solid black;
+//  }
+//
+//  .sidebar {
+//    width: 200px;
+//    float: left;
+//  }
+//  &.right-nav {
+//    .sidebar {
+//            float: right;
+//    }
+//    .main {
+//      margin-left: 0px;
+//      margin-right: 220px;
+//    }
+//  }
+//}
+
+//@mixin btn-color($color) {
+//  background-color: $color;
+//  color: #fff;
+//  font-family: sans-serif;
+//}
+//
+//.btn {
+//  font-size: 20px;
+//  font-weight: bold;
+//  padding: 5px 10px;
+//  &.btn-red { @include btn-color(#99060d); }
+//  &.btn-green { @include btn-color(#3c3); }
+//  &.btn-blue { @include btn-color(#33a); }
+//}
+
+//.buttons {
+//  margin-top: 10px;
+//}
+//
+//$hopbush: #c69 !default;
+//$patina: #699 !default;
+//$venus: #998099 !default;
+//$nebula: #d2e1dd !default;
+//
+//$black: #000 !default;
+//$white: #fff !default;
+//
+//$btn-disabled-opacity: 0.5 !default;
+//
+//.btn {
+//  padding: 2px 10px;
+//  border-radius: 2px;
+//  border: 1px solid #c46;
+//  &-primary {
+//    background: $hopbush;
+//    color: #fff;
+//    border: 1px solid $venus
+//  }
+//  &-secondary {
+//    background: $nebula;
+//    color: #000;
+//    borrder: 1px solid $patina
+//  }
+//  &:disabled {
+//    opacity: $btn-disabled-opacity;
+//  }
+//}
+
+//$color: red;
+//
+//#full-name {
+//  font-size: 40px;
+//  margin: 30px;
+//  text-align: center;
+//}
+//
+//
+//.sidebar {
+//  max-width: 400px;
+//
+//  &__title {
+//    font-size: 40px;
+//    margin: 30px;
+//    text-align: center;
+//  }
+//
+//  &__description {
+//    font-size: 30px;
+//  }
+//}

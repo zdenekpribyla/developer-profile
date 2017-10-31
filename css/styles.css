@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto; }
+
+.col-container {
+  display: flex;
+  width: 100%; }
+
+.col {
+  display: table-cell;
+  padding: 20px; }
+
+.sidebar-block {
+  width: 30%;
+  background-color: lightblue; }
+
+.projects-block {
+  width: 70%;
+  background-color: lightgreen; }
+
+.footer {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  display: table;
+  text-align: center;
+  background-color: burlywood; }
+
+@media only screen and (max-width: 767px) {
+  .col-container {
+    display: table; }
+
+  .col {
+    display: block;
+    width: 100%; } }
+
+/*# sourceMappingURL=styles.css.map */
