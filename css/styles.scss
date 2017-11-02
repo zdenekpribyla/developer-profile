@@ -1,12 +1,12 @@
-* {
-  box-sizing: border-box;
-}
+//* {
+//  box-sizing: border-box;
+//}
 
 .container {
   max-width: 1000px;
   width: 100%;
   margin: auto;
-
+  font-family: sans-serif;
 }
 
 .col-container {
@@ -16,12 +16,50 @@
 
 .col {
   display: table-cell;
-  padding: 20px;
+  padding: 20px 20px;
 }
 
 .sidebar-block {
   width: 30%;
   background-color: lightblue;
+
+  .sidebar__all {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sidebar__image {
+    text-align: center;
+  }
+  .sidebar__title {
+    font-size: larger;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .sidebar__subtitle {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+  }
+  .sidebar__description {
+    padding-top: 15px;
+    font-size: small;
+  }
+  .sidebar__technologies {
+    padding-top: 15px;
+    margin-bottom: 30px;
+  }
+  .technologies {
+    float: left;
+    background-color: #2a2a2a;
+    color: white;
+    padding: 5px;
+    margin: 5px 10px 5px 0px;
+    font-size: medium;
+  }
+
 }
 
 .projects-block {
@@ -39,11 +77,11 @@
 }
 
 @media only screen and (max-width: 767px) {
-.col-container {
-  display: table;
-}
-  .col {
+  .col-container {
     display: block;
+  }
+  .col {
+    display: table;
     width: 100%;
   }
 }
