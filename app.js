@@ -6,29 +6,48 @@
 
 
 
-var resultDiv = document.getElementsByClassName('result');
+
 var url = 'https://api.github.com/users/zdenekpribyla/repos';
 fetch(url)
     .then((resp) => resp.json())
 .then(function(data) {
     console.log(data);
 
-        var onlyName = data.map(function (project) {
-        return project.name;
-            });
-    console.log(onlyName);
+        var onlyName = data.map(function (projects) {
+        return projects; });
 
-    onlyName.forEach(function (singleProject) {
-        var el = document.getElementById('result'),
-            // Make a new div
-            elChild = document.createElement("h2");
-
+        onlyName.forEach(function (project) {
+        //http://clubmate.fi/append-and-prepend-elements-with-pure-javascript/
+            var parent = document.getElementById('result');
+        // Make a new div
+            var divChild = document.createElement("div");
+            divChild.className = "projects";
 // Give the new div some content
-        elChild.innerHTML = singleProject;
+            divChild.innerHTML = ('<h2 class="projects__title">' + project.name + '</h2>' + '<p class="projects__description">' + project.description + '</p>');
+
 
 // Chug in into the parent element
-        el.appendChild(elChild);
-    });
+            parent.appendChild(divChild);
+        });
+
+        });
+    //console.log(onlyName);
+
+//     onlyName.forEach(function (singleProject) {
+//         //http://clubmate.fi/append-and-prepend-elements-with-pure-javascript/
+//         var parent = document.getElementById('result');
+//             // Make a new div
+//          var divChild = document.createElement("div");
+//
+// // Give the new div some content
+//         divChild.innerHTML = singleProject;
+//
+// // Chug in into the parent element
+//         parent.appendChild(divChild);
+//     });
+
+    // var divProject = document.createElement("div");
+    // divProject.style.cssText = "background-color:pink; border:2px dashed green; color:white;"
 
 
 
@@ -50,7 +69,7 @@ fetch(url)
     //     resultDiv.append('<hr>')
     // })
 
-});
+
     // .catch(function(error) {
     //     console.log(JSON.stringify(error));
     // });
