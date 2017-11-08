@@ -72,21 +72,22 @@
   text-align: center
 }
 
-.projects {
+.project {
   background-color: lightblue;
   border: solid 2px mediumblue;
   margin: auto;
   max-width: 70%;
   margin-bottom: 20px;
 
-  .projects__title {
+  &__title {
     padding: 0 10%;
   }
-  .projects__description {
+  &__description {
     padding: 0 10%
   }
-  .projects__details {
+  &__detail {
     display: none;
+    background-color: red;
   }
 }
 

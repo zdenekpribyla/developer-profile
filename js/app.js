@@ -7,12 +7,25 @@ $(document).ready(function () {
 
         data.forEach(function (project) {
 
-
-            $('.projects-list').append('<div class="project"><h2 class="projects__title">' + project.name + '</h2><p class="projects__description">' + project.description +
-                '</p><div class="projects__read-more"><input type="button" value="Read Details" class="button-class"></div><div class="projects__details" id="project-details">Watch code source: ' + '<a href="' + project.html_url + '">' + project.html_url + '</div></div>')
-            
+            $('.projects-list').append(
+                '<div class="project">' +
+                '<h2 class="project__title">' + project.name + '</h2>' +
+                '<p class="project__description">' + project.description + '</p>' +
+                '<button type="button" class="display-detail-btn">Open details</button>' +
+                '<div class="project__detail">Watch code source: ' +
+                '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
+                '</div>' +
+                '</div>')
         });
 
+    });
+
+    // https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
+    $('.projects-list').on('click', '.display-detail-btn', function () {
+        console.log('click button');
+        // var button = $(this)
+        // console.log(button)
+        $(this).parent().find('.project__detail').css('display', 'block');
 
     });
 
