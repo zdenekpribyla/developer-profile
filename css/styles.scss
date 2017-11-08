@@ -19,47 +19,51 @@
   padding: 20px 20px;
 }
 
-.sidebar-block {
-  width: 30%;
-  background-color: lightblue;
+.sidebar {
 
-  .sidebar__all {
+  &-block {
+    width: 30%;
+    background-color: lightblue;
+  }
+
+  &__all {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .sidebar__image {
+  &__image {
     text-align: center;
   }
-  .sidebar__title {
+  &__title {
     font-size: larger;
     padding-top: 10px;
     text-align: center;
   }
-  .sidebar__subtitle {
+  &__subtitle {
     padding-left: 10px;
     padding-top: 5px;
     font-size: medium;
     font-style: italic;
     text-align: center;
   }
-  .sidebar__description {
+  &__description {
     padding-top: 15px;
     font-size: small;
   }
-  .sidebar__technologies {
+  &__technologies {
     padding-top: 15px;
     margin-bottom: 30px;
   }
-  .technologies {
-    float: left;
-    background-color: #2a2a2a;
-    color: white;
-    padding: 5px;
-    margin: 5px 10px 5px 0px;
-    font-size: medium;
-  }
 
+}
+
+.skills {
+  float: left;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 5px;
+  margin: 5px 10px 5px 0;
+  font-size: medium;
 }
 
 .projects-block {
