@@ -71,6 +71,28 @@
   background-color: lightgreen;
 }
 
+.title-github {
+  text-align: center
+}
+
+.projects {
+  background-color: lightblue;
+  border: solid 2px mediumblue;
+  margin: auto;
+  max-width: 70%;
+  margin-bottom: 20px;
+
+  .projects__title {
+    padding: 0px 10%;
+  }
+  .projects__description {
+    padding: 0px 10%
+  }
+  .projects__details {
+    display: none;
+  }
+}
+
 .footer {
   max-width: 1000px;
   width: 100%;
@@ -86,6 +108,9 @@
   }
   .col {
     display: table;
+    width: 100%;
+  }
+  .footer {
     width: 100%;
   }
 }
