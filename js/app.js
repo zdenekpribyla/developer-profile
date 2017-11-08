@@ -23,12 +23,27 @@ $(document).ready(function () {
     // https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
     $('.projects-list').on('click', '.display-detail-btn', function () {
         console.log('click button');
-        // var button = $(this)
-        // console.log(button)
-        $(this).parent().find('.project__detail').css('display', 'block');
-
+        var projectDetail = $(this).parent().find('.project__detail');
+        $(projectDetail).toggle();
     });
 
+
 });
+// var isElementVisible = false;
+//
+// if (isElementVisible) {
+//     projectDetail.hide();
+//     console.log('spustil if');
+//     isElementVisible = false
+// }
+// else {
+//     projectDetail.show();
+//     console.log('spustil else');
+//     isElementVisible = true
+// }
+
+
+
+
 
 
