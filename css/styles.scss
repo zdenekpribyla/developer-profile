@@ -1,12 +1,33 @@
 
+
+
+$font-title: 'Oswald', sans-serif;
+$font-text: 'Open Sans', sans-serif;
+$font-size: 14px;
+
+body {
+  font-family: $font-text;
+  font-size: $font-size;
+}
+
+h1 {
+  font-family: $font-title;
+  font-size: $font-size * 3
+}
+
+h2 {
+  font-size: $font-size * 2;
+}
+
+
+
 .container {
   max-width: 1000px;
   width: 100%;
   margin: auto;
-  font-family: sans-serif;
 }
 
-.col-container {
+.container__col {
   display: block;
   width: 100%;
 }
@@ -18,10 +39,8 @@
 
 .sidebar {
 
-  &-block {
-    width: 30%;
-    background-color: lightblue;
-  }
+  width: 30%;
+  background-color: lightblue;
 
   &__all {
     padding-left: 10px;
@@ -32,20 +51,17 @@
     text-align: center;
   }
   &__title {
-    font-size: larger;
     padding-top: 10px;
     text-align: center;
   }
   &__subtitle {
     padding-left: 10px;
     padding-top: 5px;
-    font-size: medium;
     font-style: italic;
     text-align: center;
   }
   &__description {
     padding-top: 15px;
-    font-size: small;
   }
   &__technologies {
     padding-top: 15px;
@@ -63,20 +79,20 @@
   font-size: medium;
 }
 
-.projects-block {
+.center {
   width: 70%;
   background-color: lightgreen;
-}
 
-.title-github {
-  text-align: center
+  &__title {
+    text-align: center
+  }
 }
 
 .project {
   background-color: lightblue;
-  border: solid 2px mediumblue;
+  padding: $font-size;
   margin: auto;
-  max-width: 70%;
+  max-width: 80%;
   margin-bottom: 20px;
 
   &__title {
@@ -87,13 +103,15 @@
   }
   &__detail {
     display: none;
-    background-color: red;
+  }
+  &__detail-btn {
+    font-size: $font-size;
+    background-color: #008CBA;
+    padding: 5px 10px;
   }
 }
 
-
-
-.footer {
+.container__footer {
   max-width: 1000px;
   width: 100%;
   margin: auto;
@@ -103,7 +121,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .col-container {
+  .container__col {
     display: block;
   }
   .col {

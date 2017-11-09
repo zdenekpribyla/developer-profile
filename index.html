@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/app.js"></script>
 
@@ -20,13 +21,13 @@
 <!--Click on button
 <input type="button"  onclick="testApp()" value="test js connection">-->
 <div class="container">
-    <div class="col-container">
-        <div class="col sidebar-block">
+    <div class="container__col">
+        <div class="col sidebar">
             <!--<div class="my-photo"><img src="http://pribyla.com/css/img/face_foto.jpg"></div>-->
             <div class="sidebar__image sidebar__all"><img src="http://pribyla.com/css/img/face_foto.jpg"></div>
 
 
-            <div class="sidebar__title sidebar__all">Zdenek Pribyla</div>
+            <div class="sidebar__title sidebar__all"><i class="fa fa-camera-retro"></i>Zdenek Pribyla</div>
             <div class="sidebar__subtitle">Junior JavaScript Developer</div>
             <div class="sidebar__description sidebar__all">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vivamus ipsum
@@ -49,30 +50,13 @@
                 <div class="skills">SEO</div>
             </div>
         </div>
-        <div class="col projects-block">
-            <h1 class="title-github">My public GitHub repositories</h1>
-            <div class="projects-list"></div>
-            <!--<div class="project-single-block"><h2>Project 1</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-            <!--Vivamus ipsum lorem, facilisis in fermentum quis, maximus gravida leo. Nullam tristique et turpis nec-->
-            <!--tincidunt. Nullam in nisl id neque ultrices cursus eget vitae arcu. Vestibulum porttitor nulla rhoncus,-->
-            <!--faucibus nulla quis, tempor lacus. Nunc est ex, hendrerit vitae cursus nec, imperdiet a diam. Nulla-->
-            <!--facilisi. Praesent nisl justo, aliquet vel lectus convallis, interdum sagittis urna.-->
-            <!--</div>-->
-            <!--<div class="project-single-block"><h2>Project 2</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-            <!--Vivamus ipsum lorem, facilisis in fermentum quis, maximus gravida leo. Nullam tristique et turpis nec-->
-            <!--tincidunt. Nullam in nisl id neque ultrices cursus eget vitae arcu. Vestibulum porttitor nulla rhoncus,-->
-            <!--faucibus nulla quis, tempor lacus. Nunc est ex, hendrerit vitae cursus nec, imperdiet a diam. Nulla-->
-            <!--facilisi. Praesent nisl justo, aliquet vel lectus convallis, interdum sagittis urna.-->
-            <!--</div>-->
-            <!--<div class="project-single-block"><h2>Project 3</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-            <!--Vivamus ipsum lorem, facilisis in fermentum quis, maximus gravida leo. Nullam tristique et turpis nec-->
-            <!--tincidunt. Nullam in nisl id neque ultrices cursus eget vitae arcu. Vestibulum porttitor nulla rhoncus,-->
-            <!--faucibus nulla quis, tempor lacus. Nunc est ex, hendrerit vitae cursus nec, imperdiet a diam. Nulla-->
-            <!--facilisi. Praesent nisl justo, aliquet vel lectus convallis, interdum sagittis urna.-->
-            <!--</div>-->
+        <div class="col center">
+            <h1 class="center__title">My public GitHub repositories</h1>
+            <div class="center__list"></div>
+
         </div>
     </div>
-    <div class="footer">copyright by pribyla.com 2017</div>
+    <div class="container__footer">copyright by pribyla.com 2017</div>
 </div>
 
 
