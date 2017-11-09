@@ -24,7 +24,7 @@ $(document).ready(function () {
     $('.projects-list').on('click', '.display-detail-btn', function () {
         console.log('click button');
         var projectDetail = $(this).parent().find('.project__detail');
-        $(projectDetail).toggle();
+        $(projectDetail).toggle(400);
     });
 
 
