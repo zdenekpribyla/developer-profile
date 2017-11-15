@@ -37,9 +37,21 @@ $(document).ready(function () {
         $(this).rotate(rotation);
     });
 
-    $(".filter__tag").click(function () {
-        $('.filter__tag').removeClass('filter__selected');
-        $(this).addClass('filter__selected')
+    var filterTags = $('.filter__tag');
+
+    filterTags.click(function () {
+        if ($(this).hasClass('filter__selected')) {
+            $(this).removeClass('filter__selected');
+            console.log('remove class from active button');
+        }
+        else {
+            filterTags.removeClass('filter__selected');
+            console.log('remove class .filter__selected everywhere');
+            $(this).addClass('filter__selected');
+            console.log('add class filter__selected on that button');
+        }
+
+
     });
 
 });
