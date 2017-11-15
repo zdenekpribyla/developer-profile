@@ -12,7 +12,7 @@ $(document).ready(function () {
                 '<p class="project__description">' + project.description + '</p>' +
                 '<div class="project__detail">Watch code source: ' +
                 '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
-                '</div>' + '<div class="project__btn"><i class="fa fa-caret-square-o-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>')
         });
 
