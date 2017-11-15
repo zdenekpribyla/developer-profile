@@ -91,25 +91,30 @@ h2 {
   &__title {
     text-align: center
   }
-  &__filter {
-    display: inline-block;
-    &__tags {
-      float: left;
-      background-color: $black;
-      padding: 5px 5px;
-      margin: 10px 10px;
-      color: white;
-    }
-  }
-
 }
 
-.filter__tags {
-  float: left;
-  background-color: $black;
-  padding: 5px 5px;
-  margin: 10px 10px;
-  color: white;
+.filter {
+  display: inline-block;
+  &__tag {
+    float: left;
+    background-color: $black;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+  &__selected {
+    background-color: red;
+    &:hover {
+      background-color: red;
+    }
+
+  }
+
 }
 
 .project {
