@@ -24,12 +24,18 @@ $(document).ready(function () {
     $('.center__list').on('click', '.project__btn', function () {
         console.log('click button');
         var projectDetail = $(this).parent().find('.project__detail');
-        $(projectDetail).toggle(400);
+        $(projectDetail).toggle(450);
         rotation += 180;
 
-        $(this).css({
-            'transform': 'rotate(' + rotation + 'deg)'
-        });
+        var that = $(this);
+        setTimeout(function () {
+            console.log('setTimeout');
+            that.css({
+                'transform': 'rotate(' + rotation + 'deg)'
+            });
+        }, 500)
+
+
     });
 
     var filterTags = $('.filter__tag');
