@@ -36,6 +36,12 @@ $(document).ready(function () {
         rotation += 180;
         $(this).rotate(rotation);
     });
+
+    $(".filter__tag").click(function () {
+        $('.filter__tag').removeClass('filter__selected');
+        $(this).addClass('filter__selected')
+    });
+
 });
 
 
