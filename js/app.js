@@ -20,23 +20,26 @@ $(document).ready(function () {
                 var that = $(this);
                 if ($(this).hasClass('filter__selected')) {
 
+                    $('.main__title').text('My all projects');
                     $(this).removeClass('filter__selected');
                     // console.log('remove class from active button');
-                    $('.project').removeClass('remove');
-                    console.log('show all projects');
+                    $('.project').removeClass('remove-project');
+                    //console.log('show all projects');
                 }
                 else {
+                    $('.main__title').text('My projects using ' + $(this).text());
                     filterTags.removeClass('filter__selected');
                     // console.log('remove class .filter__selected everywhere');
                     $(this).addClass('filter__selected');
                     // console.log('add class filter__selected on that button');
-                    $('.project').addClass('remove');
-                    console.log('remove all projects');
+                    $('.project').addClass('remove-project');
+                    //console.log('remove all projects');
                     var tags = project.tags;
                     tags.forEach(function (tag) {
                         console.log(tag);
                         if ($(that).attr('id') === tag) {
                             console.log('rovnaji se');
+                            //  ==> show all projects with that specific tag
                         }
                         else {
 
@@ -44,22 +47,6 @@ $(document).ready(function () {
                         }
                     })
                 }
-
-                //hasclass removeclass display:none
-                // $('.project').addClass('remove');
-                // var tags = project.tags;
-                // tags.forEach(function (tag) {
-                //     console.log(tag);
-                //     if ('jQuery' === tag) {
-                //         $('.project').removeClass('remove');
-                //         console.log('rovnaji se');
-                //     }
-                //     else {
-                //
-                //         console.log('nerovnaji se');
-                //     }
-                // })
-
             });
 
         });
