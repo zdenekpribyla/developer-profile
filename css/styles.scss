@@ -84,7 +84,7 @@ h2 {
   font-size: $font-size;
 }
 
-.center {
+.main {
   width: 70%;
   background-color: $white;
 
@@ -103,6 +103,7 @@ h2 {
     color: white;
     cursor: pointer;
     user-select: none;
+    transition-delay: 60ms;
 
     &:hover {
       background-color: $blue;
@@ -112,10 +113,18 @@ h2 {
     background-color: red;
     &:hover {
       background-color: red;
+
     }
 
   }
 
+}
+
+.remove {
+  display: none;
+}
+.add {
+  display: block;
 }
 
 .project {
