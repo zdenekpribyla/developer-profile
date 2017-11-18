@@ -6,22 +6,71 @@ $(document).ready(function () {
 
         data.forEach(function (project) {
 
-            $('.center__list').append(
+            $('.main__list').append(
                 '<div class="project">' +
                 '<h2 class="project__title">' + project.name + '</h2>' +
                 '<p class="project__description">' + project.description + '</p>' +
                 '<div class="project__detail">Watch code source: ' +
                 '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
-                '</div>')
+                '</div>');
+
+            var filterTags = $('.filter__tag');
+            filterTags.click(function () {
+                var that = $(this);
+                if ($(this).hasClass('filter__selected')) {
+
+                    $(this).removeClass('filter__selected');
+                    // console.log('remove class from active button');
+                    $('.project').removeClass('remove');
+                    console.log('show all projects');
+                }
+                else {
+                    filterTags.removeClass('filter__selected');
+                    // console.log('remove class .filter__selected everywhere');
+                    $(this).addClass('filter__selected');
+                    // console.log('add class filter__selected on that button');
+                    $('.project').addClass('remove');
+                    console.log('remove all projects');
+                    var tags = project.tags;
+                    tags.forEach(function (tag) {
+                        console.log(tag);
+                        if ($(that).attr('id') === tag) {
+                            console.log('rovnaji se');
+                        }
+                        else {
+
+                            console.log('nerovnaji se');
+                        }
+                    })
+                }
+
+                //hasclass removeclass display:none
+                // $('.project').addClass('remove');
+                // var tags = project.tags;
+                // tags.forEach(function (tag) {
+                //     console.log(tag);
+                //     if ('jQuery' === tag) {
+                //         $('.project').removeClass('remove');
+                //         console.log('rovnaji se');
+                //     }
+                //     else {
+                //
+                //         console.log('nerovnaji se');
+                //     }
+                // })
+
+            });
+
         });
+
 
     });
 
     var rotation = 0;
 
     // https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
-    $('.center__list').on('click', '.project__btn', function () {
+    $('.main__list').on('click', '.project__btn', function () {
         console.log('click button');
         var projectDetail = $(this).parent().find('.project__detail');
         $(projectDetail).toggle(450);
@@ -38,22 +87,23 @@ $(document).ready(function () {
 
     });
 
-    var filterTags = $('.filter__tag');
-
-    filterTags.click(function () {
-        if ($(this).hasClass('filter__selected')) {
-            $(this).removeClass('filter__selected');
-            console.log('remove class from active button');
-        }
-        else {
-            filterTags.removeClass('filter__selected');
-            console.log('remove class .filter__selected everywhere');
-            $(this).addClass('filter__selected');
-            console.log('add class filter__selected on that button');
-        }
-
-
-    });
+    // var filterTags = $('.filter__tag');
+    //
+    // filterTags.click(function () {
+    //     if ($(this).hasClass('filter__selected')) {
+    //         $(this).removeClass('filter__selected');
+    //         console.log('remove class from active button');
+    //     }
+    //     else {
+    //         filterTags.removeClass('filter__selected');
+    //         console.log('remove class .filter__selected everywhere');
+    //         $(this).addClass('filter__selected');
+    //         console.log('add class filter__selected on that button');
+    //     }
+    //
+    //
+    //
+    // });
 
 });
 
