@@ -6,7 +6,7 @@ $(document).ready(function () {
         console.log(data);
 
 
-        data.forEach(function (project) {
+        _.forEach(data, function (project) {
 
             $('.main__list').append(
                 '<div class="project">' +
