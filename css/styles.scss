@@ -109,19 +109,17 @@ h2 {
       background-color: $blue;
     }
   }
-  &__selected {
+  &--selected {
     background-color: red;
     &:hover {
       background-color: red;
 
     }
-
   }
-
-}
-
-.remove-project {
-  display: none;
+  &__title {
+    display: block;
+    text-align: center;
+  }
 }
 
 
@@ -132,6 +130,9 @@ h2 {
   max-width: 80%;
   margin-bottom: 20px;
 
+  &--hide {
+    display: none;
+  }
   &__title {
     padding: 0 10%;
   }
