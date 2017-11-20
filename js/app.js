@@ -26,8 +26,21 @@ $(document).ready(function () {
                 $('.filter__title').text('All projects');
                 $(this).removeClass('filter--selected');
                 // console.log('remove class from active button');
-                $('.project').removeClass('project--hide');
+                $('.project').addClass('project--hide');
                 //console.log('show all projects');
+                data.forEach(function (project) {
+
+                    $('.main__list').append(
+                        '<div class="project">' +
+                        '<h2 class="project__title">' + project.name + '</h2>' +
+                        '<p class="project__description">' + project.description + '</p>' +
+                        '<div class="project__detail">Watch code source: ' +
+                        '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
+                        '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                        '</div>');
+
+
+                });
             }
             else {
                 $('.filter__title').text('Projects using ' + $(this).text());
@@ -57,21 +70,6 @@ $(document).ready(function () {
                         }
                     }
                 }
-
-
-                // var uniqeProject = data.map(function (project) {
-                //     return project
-                // })
-                // console.log(uniqeProject);
-
-                // if (that.attr('id') === tag) {
-                //     console.log('rovnaji se');
-                //     //  ==> show all projects with that specific tag
-                // }
-                // else {
-                //
-                //     console.log('nerovnaji se');
-                // }
             }
         });
 
