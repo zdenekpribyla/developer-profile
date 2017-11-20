@@ -1,12 +1,10 @@
-// var _ = require('lodash');
-
 $(document).ready(function () {
 
     $.get('./js/data.json', function (data) {
-        console.log(data);
+        // console.log(data);
 
 
-        _.forEach(data, function (project) {
+        data.forEach(function (project) {
 
             $('.main__list').append(
                 '<div class="project">' +
@@ -19,6 +17,7 @@ $(document).ready(function () {
 
 
         });
+
         var filterTags = $('.filter__tag');
         filterTags.click(function () {
             var that = $(this);
@@ -39,14 +38,40 @@ $(document).ready(function () {
                 $('.project').addClass('project--hide');
                 //console.log('remove all projects');
                 // ==> add .map for tags and after .filter for projects with specific tag
-                if (that.attr('id') === tag) {
-                    console.log('rovnaji se');
-                    //  ==> show all projects with that specific tag
-                }
-                else {
 
-                    console.log('nerovnaji se');
+                //console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var singleProject = data[i];
+                    for (var index = 0; index < singleProject.tags.length; index++) {
+                        var singleTag = singleProject.tags[index];
+                        if (singleTag === that.attr('id')) {
+                            //console.log(singleProject);
+                            $('.main__list').append(
+                                '<div class="project">' +
+                                '<h2 class="project__title">' + singleProject.name + '</h2>' +
+                                '<p class="project__description">' + singleProject.description + '</p>' +
+                                '<div class="project__detail">Watch code source: ' +
+                                '<a href="' + singleProject.html_url + '">' + singleProject.html_url + '</a>' +
+                                '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                                '</div>');
+                        }
+                    }
                 }
+
+
+                // var uniqeProject = data.map(function (project) {
+                //     return project
+                // })
+                // console.log(uniqeProject);
+
+                // if (that.attr('id') === tag) {
+                //     console.log('rovnaji se');
+                //     //  ==> show all projects with that specific tag
+                // }
+                // else {
+                //
+                //     console.log('nerovnaji se');
+                // }
             }
         });
 
