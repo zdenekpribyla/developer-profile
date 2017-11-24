@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/lodash.js"></script>
 
 </head>
 <body>
@@ -25,7 +26,7 @@
 <div class="container">
     <div class="container__col">
         <div class="col sidebar">
-            <div class="sidebar__image sidebar__all"><img src="http://pribyla.com/css/img/face_foto.jpg"></div>
+            <!--<div class="sidebar__image sidebar__all"><img class="profile-image" src="https://pbs.twimg.com/profile_images/782682016152158208/N51OqQ-3.jpg"></div>-->
             <div class="sidebar__title sidebar__all">Zdenek Pribyla</div>
             <div class="sidebar__subtitle">Junior JavaScript Developer</div>
             <div class="sidebar__description sidebar__all">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -39,41 +40,39 @@
                 aliquet vel lectus convallis, interdum sagittis urna.
             </div>
             <div class="sidebar__skills sidebar__all">
-                <div class="skills">HTML5</div>
-                <div class="skills">SassCSS</div>
-                <div class="skills">ResponsiveDesign</div>
+                <div class="skills">HTML</div>
+                <div class="skills">Sass</div>
                 <div class="skills">JavaSrcript</div>
                 <div class="skills">Node.js</div>
                 <div class="skills">jQuery</div>
                 <div class="skills">GIT</div>
                 <div class="skills">SEO</div>
+                <div class="skills">ResponsiveDesign</div>
             </div>
         </div>
-        <div class="col center">
-            <h1 class="center__title">My public GitHub repositories</h1>
-            <div class="center__list"></div>
+        <div class="col main">
+            <h1 class="main__title">My all public repositories</h1>
+            <div class="filter">
+                <ul>
+                    <li class="filter__tag" id="Html">Html</li>
+                    <li class="filter__tag" id="Sass">Sass</li>
+                    <li class="filter__tag" id="JavaScript">JavaScript</li>
+                    <li class="filter__tag" id="Node.js">Node.js</li>
+                    <li class="filter__tag" id="jQuery">jQuery</li>
+                    <li class="filter__tag" id="GIT">GIT</li>
+                    <li class="filter__tag" id="SEO">SEO</li>
+                    <li class="filter__tag" id="ResponsiveDesign">ResponsiveDesign</li>
+                </ul>
+
+            </div>
+            <h2 class="filter__title">All projects</h2>
+
+            <div class="main__list"></div>
 
         </div>
     </div>
     <div class="container__footer">copyright by pribyla.com 2017</div>
 </div>
-
-
-<!--<div class="buttons"><input type="button" class="btn btn-primary" value="click on me">Primary</div>-->
-<!--<div class="buttons"><input type="button" class="btn btn-secondary" value="click on me">Secondary</div>-->
-<!--<div class="buttons"><input type="button" disabled class="btn btn-primary" value="click on me">Primary Disabled</div>-->
-<!--<div class="buttons"><input type="button" disabled class="btn btn-secondary" value="click on me">Secondary Disabled</div>-->
-<!--<div class="btn">-->
-<!--<div class="btn btn-red">error red</div>-->
-<!--<div class="btn btn-green">error green</div>-->
-<!--<div class="btn btn-blue">error blue</div>-->
-<!--</div>-->
-
-
-<!--<div class="container right-nav">-->
-<!--<div class="sidebar">sidebar</div>-->
-<!--<div class="main">main content</div>-->
-<!--</div>-->
 
 
 </body>

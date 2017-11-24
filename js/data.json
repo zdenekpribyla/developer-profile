@@ -3,6 +3,7 @@
     "id": 108554892,
     "name": "developer-profile",
     "full_name": "zdenekpribyla/developer-profile",
+    "tags": ["Html", "Sass", "JavaScript", "jQuery", "Node.js", "GIT", "ResponsiveDesign", "SEO"],
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -93,6 +94,7 @@
     "id": 108530229,
     "name": "development-notes",
     "full_name": "zdenekpribyla/development-notes",
+    "tags": ["JavaScript", "jQuery", "GIT"],
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -183,6 +185,7 @@
     "id": 102712516,
     "name": "display-price",
     "full_name": "zdenekpribyla/display-price",
+    "tags": ["Html", "Sass", "JavaScript", "GIT"],
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -273,6 +276,7 @@
     "id": 100613085,
     "name": "gas-calculator",
     "full_name": "zdenekpribyla/gas-calculator",
+    "tags": ["Html", "JavaScript", "GIT"],
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -363,6 +367,7 @@
     "id": 104223207,
     "name": "nodejs-playground",
     "full_name": "zdenekpribyla/nodejs-playground",
+    "tags": ["JavaScript", "Node.js", "GIT"],
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -453,6 +458,7 @@
     "id": 101297851,
     "name": "z-score-calculator",
     "full_name": "zdenekpribyla/z-score-calculator",
+    "tags": ["Html", "JavaScript", "GIT"],
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -543,6 +549,7 @@
     "id": 102859710,
     "name": "z-score-convert",
     "full_name": "zdenekpribyla/z-score-convert",
+    "tags": ["Html", "JavaScript", "GIT"],
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,

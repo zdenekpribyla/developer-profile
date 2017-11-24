@@ -2,12 +2,11 @@ $black: #222;
 $text-black: #444;
 $white: #fff;
 $link-black: #666;
-$hover-link-black: #222;
 $blue: #4d9abf;
 $tyrkys: #00c7b7;
 $font-title: 'Roboto Slab', serif;
 $font-text: 'Roboto', sans-serif;
-$font-size: 14px;
+$font-size: 16px;
 
 body {
   font-family: $font-text;
@@ -42,7 +41,7 @@ h2 {
 .sidebar {
 
   width: 30%;
-  background-color: lightblue;
+  background-color: $blue;
 
   &__all {
     padding-left: 10px;
@@ -72,31 +71,68 @@ h2 {
 
 }
 
+.profile-image {
+  max-width: 150px;
+}
+
 .skills {
   float: left;
-  background-color: $text-black;
+  background-color: $black;
   color: white;
   padding: 5px;
   margin: 5px 10px 5px 0;
-  font-size: medium;
+  font-size: $font-size;
 }
 
-.center {
+.main {
   width: 70%;
-  background-color: lightgreen;
+  background-color: $white;
 
   &__title {
     text-align: center
   }
 }
 
+.filter {
+  display: inline-block;
+  &__tag {
+    float: left;
+    background-color: $black;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transition-delay: 60ms;
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+  &--selected {
+    background-color: red;
+    &:hover {
+      background-color: red;
+
+    }
+  }
+  &__title {
+    display: block;
+    text-align: center;
+  }
+}
+
+
 .project {
-  background-color: lightblue;
+  background-color: $blue;
   padding: $font-size;
   margin: auto;
   max-width: 80%;
   margin-bottom: 20px;
 
+  &--hide {
+    display: none;
+  }
   &__title {
     padding: 0 10%;
   }
@@ -111,7 +147,7 @@ h2 {
 
     &-open {
       color: $text-black;
-      background-color: red;
+      //background-color: red;
     }
     &-close {
 
