@@ -2,6 +2,7 @@ $black: #222;
 $text-black: #444;
 $white: #fff;
 $link-black: #666;
+$light-grey: #e4e4e4;
 $blue: #4d9abf;
 $tyrkys: #00c7b7;
 $font-title: 'Roboto Slab', serif;
@@ -11,6 +12,7 @@ $font-size: 16px;
 body {
   font-family: $font-text;
   font-size: $font-size;
+  margin: 0;
 }
 
 h1 {
@@ -20,6 +22,26 @@ h1 {
 
 h2 {
   font-size: $font-size * 2;
+}
+
+.header {
+  background: linear-gradient(45deg,#4d9abf 0,#00c7b7 100%);
+  height: 300px;
+
+}
+
+.menu {
+  background-color: $black;
+  height: 30px;
+}
+
+.main {
+  background-color: $light-grey;
+  min-height: 50%;
+}
+
+.footer {
+  background: #b6b6b6;
 }
 
 .container {
@@ -84,14 +106,14 @@ h2 {
   font-size: $font-size;
 }
 
-.main {
-  width: 70%;
-  background-color: $white;
-
-  &__title {
-    text-align: center
-  }
-}
+//.main {
+//  width: 70%;
+//  background-color: $white;
+//
+//  &__title {
+//    text-align: center
+//  }
+//}
 
 .filter {
   display: inline-block;
