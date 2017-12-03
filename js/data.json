@@ -1,9 +1,10 @@
 [
   {
     "id": 108554892,
-    "name": "developer-profile",
+    "name": "Developer profile website",
     "full_name": "zdenekpribyla/developer-profile",
     "tags": ["Html", "Sass", "JavaScript", "jQuery", "Node.js", "GIT", "ResponsiveDesign", "SEO"],
+    "demo_url": "http://pribyla.com",
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -25,7 +26,7 @@
     },
     "private": false,
     "html_url": "https://github.com/zdenekpribyla/developer-profile",
-    "description": "Website with my developer profile",
+    "description": "Creating my personal web presentation with portofolio of my IT developer projects.",
     "fork": false,
     "url": "https://api.github.com/repos/zdenekpribyla/developer-profile",
     "forks_url": "https://api.github.com/repos/zdenekpribyla/developer-profile/forks",
@@ -92,9 +93,10 @@
   },
   {
     "id": 108530229,
-    "name": "development-notes",
+    "name": "Development Notes",
     "full_name": "zdenekpribyla/development-notes",
     "tags": ["JavaScript", "jQuery", "GIT"],
+    "demo_url": null,
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -116,7 +118,7 @@
     },
     "private": false,
     "html_url": "https://github.com/zdenekpribyla/development-notes",
-    "description": "my personal codes",
+    "description": "My personal syntax notes help with projects development",
     "fork": false,
     "url": "https://api.github.com/repos/zdenekpribyla/development-notes",
     "forks_url": "https://api.github.com/repos/zdenekpribyla/development-notes/forks",
@@ -183,9 +185,10 @@
   },
   {
     "id": 102712516,
-    "name": "display-price",
+    "name": "Display Price",
     "full_name": "zdenekpribyla/display-price",
     "tags": ["Html", "Sass", "JavaScript", "GIT"],
+    "demo_url": null,
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -207,7 +210,7 @@
     },
     "private": false,
     "html_url": "https://github.com/zdenekpribyla/display-price",
-    "description": null,
+    "description": "Easy script displaying products price in affiliate website. Get price from json file.",
     "fork": false,
     "url": "https://api.github.com/repos/zdenekpribyla/display-price",
     "forks_url": "https://api.github.com/repos/zdenekpribyla/display-price/forks",
@@ -274,9 +277,10 @@
   },
   {
     "id": 100613085,
-    "name": "gas-calculator",
+    "name": "Gas Calculator",
     "full_name": "zdenekpribyla/gas-calculator",
     "tags": ["Html", "JavaScript", "GIT"],
+    "demo_url": "http://gas-calculator.pribyla.com",
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -298,7 +302,7 @@
     },
     "private": false,
     "html_url": "https://github.com/zdenekpribyla/gas-calculator",
-    "description": null,
+    "description": "My first JS project. It counts trip price according to trip distance, gas price and vehicle consumption.",
     "fork": false,
     "url": "https://api.github.com/repos/zdenekpribyla/gas-calculator",
     "forks_url": "https://api.github.com/repos/zdenekpribyla/gas-calculator/forks",
@@ -365,9 +369,10 @@
   },
   {
     "id": 104223207,
-    "name": "nodejs-playground",
+    "name": "Node.js Playground",
     "full_name": "zdenekpribyla/nodejs-playground",
     "tags": ["JavaScript", "Node.js", "GIT"],
+    "demo_url": null,
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -389,7 +394,7 @@
     },
     "private": false,
     "html_url": "https://github.com/zdenekpribyla/nodejs-playground",
-    "description": null,
+    "description": "Practise excercise with node.js, lodash, json data file. Using .map, .filter, forEach, .sum etc.",
     "fork": false,
     "url": "https://api.github.com/repos/zdenekpribyla/nodejs-playground",
     "forks_url": "https://api.github.com/repos/zdenekpribyla/nodejs-playground/forks",
@@ -456,9 +461,10 @@
   },
   {
     "id": 101297851,
-    "name": "z-score-calculator",
+    "name": "Z Score Calculator",
     "full_name": "zdenekpribyla/z-score-calculator",
     "tags": ["Html", "JavaScript", "GIT"],
+    "demo_url": "http://z-score.pribyla.com",
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -480,7 +486,7 @@
     },
     "private": false,
     "html_url": "https://github.com/zdenekpribyla/z-score-calculator",
-    "description": "Statistical application for calculation of Z-score",
+    "description": "Statistical application for calculation of Z-score. Commercial project.",
     "fork": false,
     "url": "https://api.github.com/repos/zdenekpribyla/z-score-calculator",
     "forks_url": "https://api.github.com/repos/zdenekpribyla/z-score-calculator/forks",
@@ -547,9 +553,10 @@
   },
   {
     "id": 102859710,
-    "name": "z-score-convert",
+    "name": "Z Score Convert Calculator",
     "full_name": "zdenekpribyla/z-score-convert",
     "tags": ["Html", "JavaScript", "GIT"],
+    "demo_url": "http://z-convert.pribyla.com",
     "owner": {
       "login": "zdenekpribyla",
       "id": 31103727,
@@ -571,7 +578,7 @@
     },
     "private": false,
     "html_url": "https://github.com/zdenekpribyla/z-score-convert",
-    "description": "calculator convert z-score to another statistical parameters",
+    "description": "Extension calculator for Z Skore parameter. Convert Z Score to other well-known statistical parameters",
     "fork": false,
     "url": "https://api.github.com/repos/zdenekpribyla/z-score-convert",
     "forks_url": "https://api.github.com/repos/zdenekpribyla/z-score-convert/forks",
