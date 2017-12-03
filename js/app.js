@@ -8,7 +8,7 @@ $(document).ready(function () {
 
             $('.main__list').append(
                 '<div class="project">' +
-                '<h2 class="project__title">' + project.name + '</h2>' +
+                '<h3 class="project__title">' + project.name + '</h3>' +
                 '<p class="project__description">' + project.description + '</p>' +
                 '<div class="project__detail">Watch code source: ' +
                 '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
                     $('.main__list').append(
                         '<div class="project">' +
-                        '<h2 class="project__title">' + project.name + '</h2>' +
+                        '<h3 class="project__title">' + project.name + '</h3>' +
                         '<p class="project__description">' + project.description + '</p>' +
                         '<div class="project__detail">Watch code source: ' +
                         '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
@@ -61,8 +61,8 @@ $(document).ready(function () {
                             //console.log(singleProject);
                             $('.main__list').append(
                                 '<div class="project">' +
-                                '<h2 class="project__title">' + singleProject.name + '</h2>' +
-                                '<p class="project__description">' + singleProject.description + '</p>' +
+                                '<h3 class="project__title">' + singleProject.name + '</h3>' +
+                                '<p class="project__descrih3ption">' + singleProject.description + '</p>' +
                                 '<div class="project__detail">Watch code source: ' +
                                 '<a href="' + singleProject.html_url + '">' + singleProject.html_url + '</a>' +
                                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
