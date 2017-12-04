@@ -10,7 +10,7 @@ $(document).ready(function () {
                 '<div class="project">' +
                 '<h3 class="project__title">' + project.name + '</h3>' +
                 '<p class="project__description">' + project.description + '</p>' +
-                '<div class="project__detail">Watch code source: ' +
+                '<div class="project__detail"><span class="project__detail__span"><i class="fa fa-github"></i>  GitHub: </span> ' +
                 '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
@@ -34,7 +34,7 @@ $(document).ready(function () {
                         '<div class="project">' +
                         '<h3 class="project__title">' + project.name + '</h3>' +
                         '<p class="project__description">' + project.description + '</p>' +
-                        '<div class="project__detail">Watch code source: ' +
+                        '<div class="project__detail"><span class="project__detail__span"><i class="fa fa-github"></i>  GitHub: </span> ' +
                         '<a href="' + project.html_url + '">' + project.html_url + '</a>' +
                         '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                         '</div>');
@@ -62,8 +62,8 @@ $(document).ready(function () {
                             $('.main__list').append(
                                 '<div class="project">' +
                                 '<h3 class="project__title">' + singleProject.name + '</h3>' +
-                                '<p class="project__descrih3ption">' + singleProject.description + '</p>' +
-                                '<div class="project__detail">Watch code source: ' +
+                                '<p class="project__description">' + singleProject.description + '</p>' +
+                                '<div class="project__detail"><span class="project__detail__span"><i class="fa fa-github"></i>  GitHub: </span> ' +
                                 '<a href="' + singleProject.html_url + '">' + singleProject.html_url + '</a>' +
                                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                                 '</div>');
