@@ -178,6 +178,7 @@ h1 strong {
     text-align: left;
     &__span {
       font-weight: bold;
+      padding-left: 7px;
     }
   }
   &__btn {
@@ -191,7 +192,7 @@ h1 strong {
 }
 
 .single__detail {
-  padding: 7px 0;
+  padding: 7px 0
 }
 
 @media only screen and (max-width: 767px) {
