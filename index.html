@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<script>-->
     <!--document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +-->
     <!--':35729/livereload.js?snipver=1"></' + 'script>')-->
@@ -10,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <!--<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
     <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -20,59 +21,102 @@
 </head>
 <body>
 
+<div class="header">
+    <h1>
+        <a href="#" class="logo">Zdenek Pribyla</a>
+        <em>Junior Front<br>End Developer</em>
+        <strong>Looking for opportunity to use my recently acquired front end development skills on an interesting
+            project.</strong>
+    </h1>
+</div>
+
+<div class="navbar">
+    <div class="menu">
+        <div class="menu__align">
+            <ul>
+                <li>Contact me:</li>
+                <li><i class="fa fa-phone menu__contact"></i>+420 736 400 189</li>
+                <li><i class="fa fa-envelope-o menu__contact"></i>zdenek.pribyla@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <h1 class="center__title">My projects</h1>
+
+    <div class="filter">
+        <ul>
+            <li class="filter__tag" id="Html">Html</li>
+            <li class="filter__tag" id="Sass">Sass</li>
+            <li class="filter__tag" id="JavaScript">JavaScript</li>
+            <li class="filter__tag" id="Node.js">Node.js</li>
+            <li class="filter__tag" id="jQuery">jQuery</li>
+            <li class="filter__tag" id="GIT">GIT</li>
+            <li class="filter__tag" id="SEO">SEO</li>
+            <li class="filter__tag" id="ResponsiveDesign">ResponsiveDesign</li>
+        </ul>
+
+    </div>
+    <h2 class="filter__title">All projects</h2>
+
+    <div class="main__list">
+    </div>
+</div>
+<div class="footer">ahoj</div>
 
 <!--Click on button
 <input type="button"  onclick="testApp()" value="test js connection">-->
-<div class="container">
-    <div class="container__col">
-        <div class="col sidebar">
-            <!--<div class="sidebar__image sidebar__all"><img class="profile-image" src="https://pbs.twimg.com/profile_images/782682016152158208/N51OqQ-3.jpg"></div>-->
-            <div class="sidebar__title sidebar__all">Zdenek Pribyla</div>
-            <div class="sidebar__subtitle">Junior JavaScript Developer</div>
-            <div class="sidebar__description sidebar__all">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus ipsum
-                lorem,
-                facilisis in fermentum quis, maximus gravida leo. Nullam tristique et turpis nec tincidunt. Nullam in
-                nisl
-                id neque ultrices cursus eget vitae arcu. Vestibulum porttitor nulla rhoncus, faucibus nulla quis,
-                tempor
-                lacus. Nunc est ex, hendrerit vitae cursus nec, imperdiet a diam. Nulla facilisi. Praesent nisl justo,
-                aliquet vel lectus convallis, interdum sagittis urna.
-            </div>
-            <div class="sidebar__skills sidebar__all">
-                <div class="skills">HTML</div>
-                <div class="skills">Sass</div>
-                <div class="skills">JavaSrcript</div>
-                <div class="skills">Node.js</div>
-                <div class="skills">jQuery</div>
-                <div class="skills">GIT</div>
-                <div class="skills">SEO</div>
-                <div class="skills">ResponsiveDesign</div>
-            </div>
-        </div>
-        <div class="col main">
-            <h1 class="main__title">My all public repositories</h1>
-            <div class="filter">
-                <ul>
-                    <li class="filter__tag" id="Html">Html</li>
-                    <li class="filter__tag" id="Sass">Sass</li>
-                    <li class="filter__tag" id="JavaScript">JavaScript</li>
-                    <li class="filter__tag" id="Node.js">Node.js</li>
-                    <li class="filter__tag" id="jQuery">jQuery</li>
-                    <li class="filter__tag" id="GIT">GIT</li>
-                    <li class="filter__tag" id="SEO">SEO</li>
-                    <li class="filter__tag" id="ResponsiveDesign">ResponsiveDesign</li>
-                </ul>
+<!--<div class="container">-->
+<!--<div class="container__col">-->
+<!--<div class="col sidebar">-->
+<!--&lt;!&ndash;<div class="sidebar__image sidebar__all"><img class="profile-image" src="https://pbs.twimg.com/profile_images/782682016152158208/N51OqQ-3.jpg"></div>&ndash;&gt;-->
+<!--<div class="sidebar__title sidebar__all">Zdenek Pribyla</div>-->
+<!--<div class="sidebar__subtitle">Junior JavaScript Developer</div>-->
+<!--<div class="sidebar__description sidebar__all">Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--Vivamus ipsum-->
+<!--lorem,-->
+<!--facilisis in fermentum quis, maximus gravida leo. Nullam tristique et turpis nec tincidunt. Nullam in-->
+<!--nisl-->
+<!--id neque ultrices cursus eget vitae arcu. Vestibulum porttitor nulla rhoncus, faucibus nulla quis,-->
+<!--tempor-->
+<!--lacus. Nunc est ex, hendrerit vitae cursus nec, imperdiet a diam. Nulla facilisi. Praesent nisl justo,-->
+<!--aliquet vel lectus convallis, interdum sagittis urna.-->
+<!--</div>-->
+<!--<div class="sidebar__skills sidebar__all">-->
+<!--<div class="skills">HTML</div>-->
+<!--<div class="skills">Sass</div>-->
+<!--<div class="skills">JavaSrcript</div>-->
+<!--<div class="skills">Node.js</div>-->
+<!--<div class="skills">jQuery</div>-->
+<!--<div class="skills">GIT</div>-->
+<!--<div class="skills">SEO</div>-->
+<!--<div class="skills">ResponsiveDesign</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col main">-->
+<!--<h1 class="main__title">My all public repositories</h1>-->
+<!--<div class="filter">-->
+<!--<ul>-->
+<!--<li class="filter__tag" id="Html">Html</li>-->
+<!--<li class="filter__tag" id="Sass">Sass</li>-->
+<!--<li class="filter__tag" id="JavaScript">JavaScript</li>-->
+<!--<li class="filter__tag" id="Node.js">Node.js</li>-->
+<!--<li class="filter__tag" id="jQuery">jQuery</li>-->
+<!--<li class="filter__tag" id="GIT">GIT</li>-->
+<!--<li class="filter__tag" id="SEO">SEO</li>-->
+<!--<li class="filter__tag" id="ResponsiveDesign">ResponsiveDesign</li>-->
+<!--</ul>-->
 
-            </div>
-            <h2 class="filter__title">All projects</h2>
+<!--</div>-->
+<!--<h2 class="filter__title">All projects</h2>-->
 
-            <div class="main__list"></div>
+<!--<div class="main__list"></div>-->
 
-        </div>
-    </div>
-    <div class="container__footer">copyright by pribyla.com 2017</div>
-</div>
+<!--</div>-->
+<!--</div>-->
+<!--<div class="container__footer">copyright by pribyla.com 2017</div>-->
+<!--</div>-->
 
 
 </body>
