@@ -3,6 +3,7 @@ $text-black: #444;
 $white: #fff;
 $link-black: #666;
 $grey: #e4e4e4;
+$dark-grey: #595959;
 $light-grey: #fbfbfb;
 $blue: #4d9abf;
 $tyrkys: #00c7b7;
@@ -24,7 +25,7 @@ h1 {
 }
 
 h2 {
-  font-family: $font-title;
+  font-family: $font-text;
   font-size: $font-size * 3;
 }
 
@@ -104,17 +105,13 @@ h1 strong {
 }
 
 .main {
-  width: 70%;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 
   &__title {
     text-align: center
   }
-}
-
-.footer {
-  background: #b6b6b6;
 }
 
 .filter {
@@ -195,6 +192,26 @@ h1 strong {
   padding: 7px 0
 }
 
+.footer {
+  background: $dark-grey;
+  width: auto;
+  height: 100px;
+  &__container {
+    margin: 0 auto;
+    height: 100px;
+    background-color: red;
+    max-width: 1000px;
+  }
+  &__col {
+    float: left;
+    width: 30%;
+    padding: 10px;
+  }
+  &__photo {
+    width: 75px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .navbar {
     height: initial;
@@ -212,14 +229,3 @@ h1 strong {
   }
 }
 
-//  .container__col {
-//    display: block;
-//  }
-//  .col {
-//    display: table;
-//    width: 100%;
-//  }
-//  .footer {
-//    width: 100%;
-//  }
-//}

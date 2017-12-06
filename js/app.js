@@ -18,16 +18,19 @@ $(document).ready(function () {
                 '</div>');
             console.log(project.tags);
 
-            for (var ind = 0; ind < project.tags.length; ind++) {
-                var singleTag = project.tags[ind];
-                $('.project__detail').append(
-                    '<div class="project__detail__skill">' + singleTag
-                );
-                // console.log(singleTag);
-            }
 
 
+            // var projectTags = project.tags;
+            // for (var ind = 0; ind < projectTags.length; ind++) {
+            //     var singleTag = projectTags[ind];
+            //     console.log('loop: ' + singleTag);
+            //     $('.project__detail').append(
+            //         '<div class="project__detail__skill">' + singleTag + '</div>'
+            //     );
+            //     // console.log(singleTag);
+            // }
         });
+
 
         var filterTags = $('.filter__tag');
         filterTags.click(function () {
