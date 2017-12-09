@@ -34,6 +34,18 @@ h3 {
   font-size: $font-size * 2;
 }
 
+h5 {
+  font-size: $font-size;
+  font-family: $font-title;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .header {
   background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
   text-align: center;
@@ -87,11 +99,6 @@ h1 strong {
   margin: 0 auto;
   &__align {
     text-align: center;
-    & ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
     & ul li {
       color: $white;
       display: inline-block;
@@ -195,20 +202,29 @@ h1 strong {
 .footer {
   background: $dark-grey;
   width: auto;
-  height: 100px;
+  height: 100%;
   &__container {
     margin: 0 auto;
-    height: 100px;
+    height: 100%;
     background-color: red;
     max-width: 1000px;
   }
+  &__col-1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
   &__col {
     float: left;
-    width: 30%;
+    width: 25%;
     padding: 10px;
   }
   &__photo {
     width: 75px;
+    float: left;
+  }
+  &__statement {
+    float: left;
   }
 }
 
