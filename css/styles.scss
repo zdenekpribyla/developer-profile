@@ -127,7 +127,7 @@ h1 strong {
     float: left;
     background-color: $black;
     padding: 5px 7px;
-    margin: 0 10px;
+    margin: 5px 10px;
     color: white;
     cursor: pointer;
     user-select: none;
@@ -200,24 +200,23 @@ h1 strong {
 }
 
 .footer {
-  background: $dark-grey;
+  background: $grey;
   width: auto;
-  height: 100%;
+  display: -webkit-box;
   &__container {
     margin: 0 auto;
-    height: 100%;
-    background-color: red;
+    //background-color: red;
     max-width: 1000px;
   }
   &__col-1 {
     float: left;
-    width: 50%;
-    padding: 10px;
+    width: 40%;
   }
   &__col {
     float: left;
-    width: 25%;
-    padding: 10px;
+    width: 30%;
+
+
   }
   &__photo {
     width: 75px;
@@ -226,6 +225,20 @@ h1 strong {
   &__statement {
     float: left;
   }
+  &__tag {
+    background-color: $black;
+    padding: 5px 7px;
+    color: white;
+    margin: 5px 0;
+    line-height: $font-size * 2.5;
+    //cursor: pointer;
+    //user-select: none;
+    //transition-delay: 60ms;
+  }
+
+}
+.col__inside {
+  padding: 15px;
 }
 
 @media only screen and (max-width: 767px) {
