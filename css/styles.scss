@@ -35,7 +35,7 @@ h3 {
 }
 
 h5 {
-  font-size: $font-size;
+  font-size: $font-size * 1.4;
   font-family: $font-title;
   margin: 10px 0;
 }
@@ -131,7 +131,7 @@ h1 strong {
     color: white;
     cursor: pointer;
     user-select: none;
-    transition-delay: 60ms;
+    transition-delay: 80ms;
 
     &:hover {
       background-color: $blue;
@@ -215,30 +215,94 @@ h1 strong {
   &__col {
     float: left;
     width: 30%;
-
-
   }
   &__photo {
-    width: 75px;
-    float: left;
+    width: 100px;
   }
-  &__statement {
-    float: left;
+  &__statement ul {
+    padding: 0 0 10px 20px;
+  }
+  &__statement li {
+    list-style: square;
+  }
+  &__cv {
+    font-weight: bold;
   }
   &__tag {
     background-color: $black;
-    padding: 5px 7px;
+    padding: 3px 7px;
     color: white;
-    margin: 5px 0;
-    line-height: $font-size * 2.5;
-    //cursor: pointer;
-    //user-select: none;
-    //transition-delay: 60ms;
+    margin: 0 0 5px 0;
+    display: inline-block;
+  }
+  &__star {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__skills {
   }
 
 }
+
 .col__inside {
-  padding: 15px;
+  padding: 20px;
+}
+
+.ratingSM {
+  width: 80px;
+  height: 16px;
+  margin: 0 0 4px 7px;
+  padding: 0;
+  list-style: none;
+  clear: both;
+  position: relative;
+  background: url('http://pribyla.com/images/hvezdy-hodnoceni.png') no-repeat 0 0;
+}
+
+.o5star {
+  background-position: 0 -320px;
+}
+
+.o45star {
+  background-position: 0 -304px;
+}
+
+.o4star {
+  background-position: 0 -288px;
+}
+
+.o35star {
+  background-position: 0 -272px;
+}
+
+.o3star {
+  background-position: 0 -255px;
+}
+
+.o25star {
+  background-position: 0 -240px;
+}
+
+.o2star {
+  background-position: 0 -224px;
+}
+
+.o15star {
+  background-position: 0 -208px;
+}
+
+.o1star {
+  background-position: 0 -192px;
+}
+
+.o05star {
+  background-position: 0 -176px;
+}
+
+ul.ratingSM li {
+  cursor: pointer;
+  float: left;
+  text-indent: -999em;
 }
 
 @media only screen and (max-width: 767px) {
@@ -254,6 +318,14 @@ h1 strong {
     &__align ul li {
       display: block;
       text-align: center;
+    }
+  }
+  .footer {
+    &__col-1 {
+      width: 100%;
+    }
+    &__col {
+      width: 100%;
     }
   }
 }
