@@ -1,0 +1,30 @@
+[
+  {"name": "Html",
+    "rating": 3
+  },
+  {"name": "Sass",
+    "rating": 25
+  },
+  {"name": "JavaScript",
+    "rating": 2
+  },
+  {"name": "NodeJS",
+    "rating": 25
+  },
+  {"name": "jQuery",
+    "rating": 15
+  },
+  {"name": "GIT",
+    "rating": 25
+  },
+  {"name": "SEO",
+    "rating": 4
+  },
+  {"name": "ResponsiveDesign",
+    "rating": 3
+  },
+  {
+    "name": "WordPress",
+    "rating": 35
+  }
+]
