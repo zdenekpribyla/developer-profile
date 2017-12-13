@@ -1,9 +1,10 @@
 [
-  {
+    {
     "id": 108554892,
     "name": "Developer profile website",
     "full_name": "zdenekpribyla/developer-profile",
     "tags": ["Html", "Sass", "JavaScript", "jQuery", "Node.js", "GIT", "ResponsiveDesign", "SEO"],
+
     "demo_url": "http://pribyla.com",
     "owner": {
       "login": "zdenekpribyla",
@@ -642,5 +643,29 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master"
+  },
+
+  {
+    "name": "Affiliate sites",
+    "tags": ["Html", "Sass", "ResponsiveDesign", "SEO", "WordPress"],
+    "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. All visitors are from SERP.",
+    "html_url": null,
+    "demo_url": null
+  },
+
+  {
+    "name": "Eshop vasetapety.cz",
+    "tags": ["Html", "Sass", "ResponsiveDesign", "SEO"],
+    "description": "Eshop with wallpapers, mostly bespoke products. Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
+    "html_url": null,
+    "demo_url": "https://www.vasetapety.cz"
+  },
+
+  {
+    "name": "Eshop vasekravaty.cz",
+    "tags": ["Html", "Sass", "ResponsiveDesign", "JavaScript", "SEO"],
+    "description": "Eshop with ties and bow ties. Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
+    "html_url": null,
+    "demo_url": "https://vasekravaty.cz"
   }
 ]
