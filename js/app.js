@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-    $.get('./js/skills.json', function (skills) {
-        skills.forEach(function (skill) {
-
+    $.get('./js/data.json/', function (skills) {
+        skills.mySkills.forEach(function (skill) {
+            console.log("mySkills");
             $('.filter__input-tag').append(
                 '<li class="filter__tag" id="' + skill.name + '">' + skill.name + '</li>'
             );
@@ -21,7 +21,7 @@ $(document).ready(function () {
         // console.log(data);
 
 
-        data.forEach(function (project) {
+        data.myProjects.forEach(function (project) {
 
             //console.log(project);
             $('.main__list').append(
@@ -58,7 +58,7 @@ $(document).ready(function () {
                 // console.log('remove class from active button');
                 $('.project').addClass('project--hide');
                 //console.log('show all projects');
-                data.forEach(function (project) {
+                data.myProjects.forEach(function (project) {
 
                     $('.main__list').append(
                         '<div class="project">' +
@@ -83,8 +83,8 @@ $(document).ready(function () {
                 // ==> add .map for tags and after .filter for projects with specific tag
 
                 //console.log(data);
-                for (var i = 0; i < data.length; i++) {
-                    var singleProject = data[i];
+                for (var i = 0; i < data.myProjects.length; i++) {
+                    var singleProject = data.myProjects[i];
                     for (var index = 0; index < singleProject.tags.length; index++) {
                         var singleTag = singleProject.tags[index];
                         if (singleTag === that.attr('id')) {
