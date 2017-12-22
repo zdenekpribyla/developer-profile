@@ -4,12 +4,14 @@ $white: #fff;
 $link-black: #666;
 $grey: #e4e4e4;
 $dark-grey: #595959;
-$light-grey: #fbfbfb;
+$light-grey: #f7f7f7;
 $blue: #4d9abf;
 $tyrkys: #00c7b7;
 $font-title: 'Roboto Slab', serif;
 $font-text: 'Roboto', sans-serif;
 $font-size: 16px;
+
+
 
 body {
   font-family: $font-text;
@@ -52,6 +54,10 @@ ul {
 
 .link a:hover {
   color: $black;
+}
+
+.fa-grey {
+  color: $white;
 }
 
 .header {
@@ -314,6 +320,30 @@ ul.ratingSM li {
   float: left;
   text-indent: -999em;
 }
+
+.hide--selector {
+  display: none;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 75px;
+  right: 40px;
+  display: none;
+}
+
+.scrollToTop:hover{
+  text-decoration: none;
+}
+
+.scroll-to-top i {
+  //background: $light-grey;
+  background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
+  padding: 10px;
+  //border: 2px solid $grey;
+  border-radius: 2px;
+}
+
 
 @media only screen and (max-width: 767px) {
   .navbar {

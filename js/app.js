@@ -19,8 +19,6 @@ $(document).ready(function () {
 
     $.get('./js/data.json', function (data) {
         // console.log(data);
-
-
         data.myProjects.forEach(function (project) {
 
             //console.log(project);
@@ -34,6 +32,13 @@ $(document).ready(function () {
                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
             console.log(project.tags);
+
+            // pridava .hide--selector uplne kazdemu projektu misto jen tomu jednomu
+            // if (project.demo_url === null) {
+            //     $('.project__detail').addClass('hide--selector');
+            //     console.log("skryj project detail");
+            //
+            // }
 
 
             // var projectTags = project.tags;
@@ -127,6 +132,24 @@ $(document).ready(function () {
 
 
     });
+
+
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scroll-to-top').fadeIn();
+        } else {
+            $('.scroll-to-top').fadeOut();
+        }
+    });
+
+    //Click event to scroll to top
+    $('.scroll-to-top').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+
+
 
 });
 
