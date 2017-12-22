@@ -27,8 +27,8 @@ $(document).ready(function () {
                 '<h3 class="project__title">' + project.name + '</h3>' +
                 '<p class="project__description">' + project.description + '</p>' +
                 '<div class="project__detail"><div class="single__detail"><i class="fa fa-github-alt"></i><span class="project__detail__span">  GitHub: </span> ' +
-                '<span class="link"><a href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  URL (live or demo version): </span> ' +
-                '<span class="link"><a class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span">Used skills: </span>' + project.tags + '</div>' +
+                '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  URL (live or demo version): </span> ' +
+                '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span">Used skills: </span>' + project.tags + '</div>' +
                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
             console.log(project.tags);
@@ -70,8 +70,8 @@ $(document).ready(function () {
                         '<h3 class="project__title">' + project.name + '</h3>' +
                         '<p class="project__description">' + project.description + '</p>' +
                         '<div class="project__detail"><div class="single__detail"><span class="project__detail__span"><i class="fa fa-github-alt"></i>  GitHub: </span> ' +
-                        '<span class="link"><a href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
-                        '<span class="link"><a href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
+                        '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
+                        '<span class="link"><a target="_blank" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
                         '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                         '</div>');
 
@@ -99,8 +99,8 @@ $(document).ready(function () {
                                 '<h3 class="project__title">' + singleProject.name + '</h3>' +
                                 '<p class="project__description">' + singleProject.description + '</p>' +
                                 '<div class="project__detail"><div class="single__detail"><span class="project__detail__span"><i class="fa fa-github-alt"></i>  GitHub: </span> ' +
-                                '<span class="link"><a href="' + singleProject.html_url + '">' + singleProject.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
-                                '<span class="link"><a href="' + singleProject.demo_url + '">' + singleProject.demo_url + '</a></span></div>' +
+                                '<span class="link"><a target="_blank" href="' + singleProject.html_url + '">' + singleProject.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
+                                '<span class="link"><a target="_blank" href="' + singleProject.demo_url + '">' + singleProject.demo_url + '</a></span></div>' +
                                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                                 '</div>');
 
