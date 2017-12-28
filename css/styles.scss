@@ -11,8 +11,6 @@ $font-title: 'Roboto Slab', serif;
 $font-text: 'Roboto', sans-serif;
 $font-size: 16px;
 
-
-
 body {
   font-family: $font-text;
   font-size: $font-size;
@@ -209,6 +207,9 @@ h1 strong {
       //background-color: red;
     }
   }
+  &__btn-rotate {
+    transform: rotate(180deg);;
+  }
 }
 
 .single__detail {
@@ -332,7 +333,7 @@ ul.ratingSM li {
   display: none;
 }
 
-.scrollToTop:hover{
+.scrollToTop:hover {
   text-decoration: none;
 }
 
@@ -343,7 +344,6 @@ ul.ratingSM li {
   //border: 2px solid $grey;
   border-radius: 2px;
 }
-
 
 @media only screen and (max-width: 767px) {
   .navbar {

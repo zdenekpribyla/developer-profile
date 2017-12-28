@@ -113,29 +113,29 @@ $(document).ready(function () {
     });
 
 
-    var rotation = 0;
-
-    // https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
+    // alternative solution: https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
     $('.main__list').on('click', '.project__btn', function () {
         console.log('click button');
         var projectDetail = $(this).parent().find('.project__detail');
         $(projectDetail).toggle(450);
-        rotation += 180;
+
 
         var that = $(this);
         setTimeout(function () {
-            console.log('setTimeout');
-            that.css({
-                'transform': 'rotate(' + rotation + 'deg)'
-            });
-        }, 500)
+            if (that.hasClass('project__btn-rotate')) {
+                that.removeClass('project__btn-rotate').animate({opacity: '0.4'}, "slow").animate({opacity: '1'}, 150);
+            }
+            else {
+                that.addClass('project__btn-rotate').animate({opacity: '0.4'}, "slow").animate({opacity: '1'}, 150);
+            }
+        }, 300)
 
 
     });
 
 
     //Check to see if the window is top if not then display button
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scroll-to-top').fadeIn();
         } else {
@@ -144,11 +144,10 @@ $(document).ready(function () {
     });
 
     //Click event to scroll to top
-    $('.scroll-to-top').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
+    $('.scroll-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 800);
         return false;
     });
-
 
 
 });
