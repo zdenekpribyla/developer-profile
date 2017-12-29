@@ -20,8 +20,8 @@ $(document).ready(function () {
     $.get('./js/data.json', function (data) {
         // console.log(data);
         data.myProjects.forEach(function (project) {
-
-            //console.log(project);
+            console.log('-----------------');
+            console.log('nazev projektu: ' + project.name);
             $('.main__list').append(
                 '<div class="project">' +
                 '<h3 class="project__title">' + project.name + '</h3>' +
@@ -41,15 +41,12 @@ $(document).ready(function () {
             // }
 
 
-            // var projectTags = project.tags;
-            // for (var ind = 0; ind < projectTags.length; ind++) {
-            //     var singleTag = projectTags[ind];
-            //     console.log('loop: ' + singleTag);
-            //     $('.project__detail').append(
-            //         '<div class="project__detail__skill">' + singleTag + '</div>'
-            //     );
-            //     // console.log(singleTag);
-            // }
+            project.tags.forEach(function (singleTag) {
+                console.log('tag: ' + singleTag); // az sem to je dobre
+                $('.project__detail').append(
+                    '<div class="project__detail__skill">' + singleTag + '</div>'
+                );
+            })
         });
 
 

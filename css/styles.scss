@@ -208,7 +208,7 @@ h1 strong {
     }
   }
   &__btn-rotate {
-    transform: rotate(180deg);;
+    transform: rotate(180deg);
   }
 }
 
@@ -326,23 +326,24 @@ ul.ratingSM li {
   display: none;
 }
 
+// SCROLL TO TOP BUTTON
+// -----------------------
 .scroll-to-top {
   position: fixed;
   bottom: 75px;
   right: 40px;
   display: none;
-}
-
-.scrollToTop:hover {
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .scroll-to-top i {
-  //background: $light-grey;
   background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
   padding: 10px;
-  //border: 2px solid $grey;
-  border-radius: 2px;
+  border-radius: 4px;
+}
+
+.scroll-to-top i:hover{
+  background: linear-gradient(45deg, #32647c 0, #08a195 100%)
 }
 
 @media only screen and (max-width: 767px) {
