@@ -102,7 +102,6 @@ h1 strong {
   max-width: 1663px;
   background-color: $black;
   border-bottom: 1px solid #aaa;
-  height: 45px;
   z-index: 100;
 }
 
@@ -118,8 +117,27 @@ h1 strong {
       line-height: 45px;
     }
   }
+
   &__contact {
     padding: 0 10px;
+  }
+}
+
+.benefits {
+  max-width: 1663px;
+  background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
+  z-index: 100;
+  text-align: center;
+  &__menu {
+
+    max-width: 1000px;
+    margin: 0 auto;
+    & ul li {
+      color: $white;
+      display: inline-block;
+      width: 33%;
+      padding: 20px 0;
+    }
   }
 }
 
@@ -240,7 +258,7 @@ h1 strong {
     background-image: url("http://pribyla.com/images/footer__img.jpg");
     border-radius: 60px;
     background-size: cover;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
   }
   &__statement ul {
     padding: 0 0 10px 20px;
@@ -367,6 +385,11 @@ ul.ratingSM li {
       text-align: center;
     }
   }
+
+  .benefits__menu ul li {
+    width: 100%;
+  }
+
   .footer {
     &__col-1 {
       width: 100%;
