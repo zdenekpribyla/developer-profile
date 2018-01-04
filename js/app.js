@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    $.get('./js/data.json/', function (skills) {
-        skills.mySkills.forEach(function (skill) {
+    $.get('./js/data.json/', function (data) {
+        data.mySkills.forEach(function (skill) {
             console.log("mySkills");
             $('.filter__input-tag').append(
                 '<li class="filter__tag" id="' + skill.name + '">' + skill.name + '</li>'
@@ -13,13 +13,20 @@ $(document).ready(function () {
                 '<ul class="ratingSM o' + skill.rating + 'star"><li class="one">1</li><li class="two">2</li>' +
                 '<li class="three">3</li><li class="four">4</li><li class="five">5</li></ul></div></div></li>'
             )
-        })
+        });
 
-    });
 
-    $.get('./js/data.json', function (data) {
         // console.log(data);
         data.myProjects.forEach(function (project) {
+
+            var projectTags = '';
+
+            project.tags.forEach(function (singleTag) {
+                console.log('tag: ' + singleTag); // az sem to je dobre
+
+                projectTags = projectTags + '<div class="project__detail__skill">' + singleTag + '</div>'
+            });
+
             console.log('-----------------');
             console.log('nazev projektu: ' + project.name);
             $('.main__list').append(
@@ -29,9 +36,14 @@ $(document).ready(function () {
                 '<div class="project__detail"><div class="single__detail"><i class="fa fa-github-alt"></i><span class="project__detail__span">  GitHub: </span> ' +
                 '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  URL (live or demo version): </span> ' +
                 '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span">Used skills: </span>' + project.tags + '</div>' +
-                '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '</div>' + projectTags + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
             console.log(project.tags);
+
+
+
+
+
 
             // pridava .hide--selector uplne kazdemu projektu misto jen tomu jednomu
             // if (project.demo_url === null) {
@@ -41,12 +53,6 @@ $(document).ready(function () {
             // }
 
 
-            project.tags.forEach(function (singleTag) {
-                console.log('tag: ' + singleTag); // az sem to je dobre
-                $('.project__detail').append(
-                    '<div class="project__detail__skill">' + singleTag + '</div>'
-                );
-            })
         });
 
 
@@ -55,7 +61,7 @@ $(document).ready(function () {
             var that = $(this);
             if ($(this).hasClass('filter--selected')) {
 
-                $('.filter__title').text('All projects');
+                $('.filter__title').text('All Projects');
                 $(this).removeClass('filter--selected');
                 // console.log('remove class from active button');
                 $('.project').addClass('project--hide');
@@ -75,7 +81,7 @@ $(document).ready(function () {
                 });
             }
             else {
-                $('.filter__title').text('Projects using ' + $(this).text());
+                $('.filter__title').text('Projects Using ' + $(this).text());
                 filterTags.removeClass('filter--selected');
                 // console.log('remove class .filter__selected everywhere');
                 $(this).addClass('filter--selected');

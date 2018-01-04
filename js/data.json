@@ -42,7 +42,7 @@
 "myProjects": [
     {
       "id": 108554892,
-      "name": "Developer profile website",
+      "name": "Developer Profile Website",
       "full_name": "zdenekpribyla/developer-profile",
       "tags": [
         "Html",
@@ -718,7 +718,7 @@
       "default_branch": "master"
     },
     {
-      "name": "Affiliate sites",
+      "name": "Affiliate Sites",
       "tags": [
         "Html",
         "Sass",

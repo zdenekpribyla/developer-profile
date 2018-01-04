@@ -54,6 +54,13 @@ ul {
   color: $black;
 }
 
+.link-phone {
+  color: $white
+}
+.link-phone-footer {
+  color: $black
+}
+
 .fa-grey {
   color: $white;
 }
@@ -99,7 +106,6 @@ h1 strong {
 }
 
 .navbar {
-  max-width: 1663px;
   background-color: $black;
   border-bottom: 1px solid #aaa;
   z-index: 100;
@@ -124,7 +130,6 @@ h1 strong {
 }
 
 .benefits {
-  max-width: 1663px;
   background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
   z-index: 100;
   text-align: center;
@@ -222,6 +227,7 @@ h1 strong {
 
     &-open {
       color: $text-black;
+      cursor: pointer;
       //background-color: red;
     }
   }
