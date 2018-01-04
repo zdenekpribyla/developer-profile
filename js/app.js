@@ -24,7 +24,7 @@ $(document).ready(function () {
             project.tags.forEach(function (singleTag) {
                 console.log('tag: ' + singleTag); // az sem to je dobre
 
-                projectTags = projectTags + '<div class="project__detail__skill">' + singleTag + '</div>'
+                projectTags = projectTags + '<div class="project__tag-single">' + singleTag + '</div>'
             });
 
             console.log('-----------------');
@@ -34,9 +34,9 @@ $(document).ready(function () {
                 '<h3 class="project__title">' + project.name + '</h3>' +
                 '<p class="project__description">' + project.description + '</p>' +
                 '<div class="project__detail"><div class="single__detail"><i class="fa fa-github-alt"></i><span class="project__detail__span">  GitHub: </span> ' +
-                '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  URL (live or demo version): </span> ' +
-                '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span">Used skills: </span>' + project.tags + '</div>' +
-                '</div>' + projectTags + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  Demo: </span> ' +
+                '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
+                 '<div class="project_tag">' + projectTags + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
             console.log(project.tags);
 
