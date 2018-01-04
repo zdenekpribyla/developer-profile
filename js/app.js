@@ -1,3 +1,20 @@
+var tagsGenerator = function (tags, className) {
+    var projectTags = '';
+
+    tags.forEach(function (singleTag) {
+        console.log('tag: ' + singleTag); // az sem to je dobre
+
+        console.log('type of tags', typeof singleTag);
+
+        if (typeof singleTag === 'object') {
+            singleTag = singleTag.name
+        }
+
+        projectTags = projectTags + '<div class="' + className + '"' + ' id="' + singleTag + '">' + singleTag + '</div>'
+    });
+    return projectTags
+};
+
 $(document).ready(function () {
 
     $.get('./js/data.json/', function (data) {
@@ -13,19 +30,18 @@ $(document).ready(function () {
                 '<ul class="ratingSM o' + skill.rating + 'star"><li class="one">1</li><li class="two">2</li>' +
                 '<li class="three">3</li><li class="four">4</li><li class="five">5</li></ul></div></div></li>'
             )
-        });
+
+
+        }); //konec forEach
+
+        $('.filter__input-tag-2').append(
+            tagsGenerator(data.mySkills, 'filter__tag')
+        );
 
 
         // console.log(data);
         data.myProjects.forEach(function (project) {
 
-            var projectTags = '';
-
-            project.tags.forEach(function (singleTag) {
-                console.log('tag: ' + singleTag); // az sem to je dobre
-
-                projectTags = projectTags + '<div class="project__tag-single">' + singleTag + '</div>'
-            });
 
             console.log('-----------------');
             console.log('nazev projektu: ' + project.name);
@@ -36,13 +52,9 @@ $(document).ready(function () {
                 '<div class="project__detail"><div class="single__detail"><i class="fa fa-github-alt"></i><span class="project__detail__span">  GitHub: </span> ' +
                 '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  Demo: </span> ' +
                 '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
-                 '<div class="project_tag">' + projectTags + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '<div class="project_tag">' + tagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
             console.log(project.tags);
-
-
-
-
 
 
             // pridava .hide--selector uplne kazdemu projektu misto jen tomu jednomu
