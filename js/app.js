@@ -12,26 +12,28 @@ var starsGenerator = function (number) {
     var isInteger = number % 1 === 0;
     // console.log('isInteger', isInteger);
 
+    var result = '';
+    var resultEmpty = '';
+    var starsMaximumNumber = 5;
     if (isInteger) {
-        var result = '';
+
         for (var i = 0; i < number; i++) {
             result = result + fullStar
         }
-        var resultEmpty = '';
-        for (var i = 0; i < (5 - number); i++) {
+        for (var i = 0; i < (starsMaximumNumber - number); i++) {
             resultEmpty = resultEmpty + emptyStar
         }
         return result + resultEmpty
     }
 
     else {
-        var result = '';
+
         for (var i = 0; (i + 1) < number; i++) {
-            result = `${result} ${fullStar}`
+            result = result + fullStar
         }
         var roundNumber = Math.ceil(number);
-        var resultEmpty = '';
-        for (var i = 0; i < (5 - roundNumber); i++) {
+
+        for (var i = 0; i < (starsMaximumNumber - roundNumber); i++) {
             resultEmpty = resultEmpty + emptyStar
         }
         return result + halfStar + resultEmpty
@@ -87,7 +89,7 @@ $(document).ready(function () {
 
         }); //konec forEach
 
-        $('.filter__input-tag-2').append(
+        $('.filter__input-tag').append(
             tagsGenerator(data.mySkills, 'filter__tag')
         );
 
@@ -105,7 +107,7 @@ $(document).ready(function () {
                 '<div class="project__detail"><div class="single__detail"><i class="fa fa-github-alt"></i><span class="project__detail__span">  GitHub: </span> ' +
                 '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  Demo: </span> ' +
                 '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
-                '<div class="project_tag">' + tagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '<div class="project_tag"><i class="fa fa-github-alt"></i><span class="project__detail__span">  Used Skills  </span>' + tagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
             console.log(project.tags);
 
