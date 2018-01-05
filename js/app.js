@@ -1,9 +1,12 @@
 
+var footerTagGenerator = function (skillName, className) {
+    return '<div class="' + className + '">' + skillName + '</div>'
+};
+
 //Rating stars
 var emptyStar = '<i class="fa fa-star-o fa-yellow" aria-hidden="true"></i>';
 var fullStar = '<i class="fa fa-star fa-yellow" aria-hidden="true"></i>';
 var halfStar = '<i class="fa fa-star-half-o fa-yellow" aria-hidden="true"></i>';
-
 
 var starsGenerator = function (number) {
     var isInteger = number % 1 === 0;
@@ -62,11 +65,15 @@ $(document).ready(function () {
             //     '<li class="filter__tag" id="' + skill.name + '">' + skill.name + '</li>'
             // );
 
-
             $('.footer__input-star').append(
-                '<li><div class=""><div class="footer__tag">' + skill.name + '</div><div class="footer__star">' +
-                starsGenerator(skill.rating) + '</div></li>'
+                '<div class="">' + footerTagGenerator(skill.name, "footer__tag") + '<div class="footer__star">' +
+                starsGenerator(skill.rating) + '</div>'
             )
+
+            // $('.footer__input-star').append(
+            //     '<li><div class=""><div class="footer__tag">' + skill.name + '</div><div class="footer__star">' +
+            //     starsGenerator(skill.rating) + '</div></li>'
+            // )
 
             // origin code for footer skills and stars
             // $('.footer__input-star').append(

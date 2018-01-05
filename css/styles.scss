@@ -312,11 +312,9 @@ h1 strong {
     font-weight: bold;
   }
   &__tag {
-    background-color: $dark-grey;
-    padding: 3px 7px;
-    color: white;
-    margin: 0 10px 5px 0;
-    border-radius: 5px;
+    color: $black;
+    font-weight: 600;
+    margin: 0 5px 5px 10px;
     display: inline-block;
   }
   &__star {
