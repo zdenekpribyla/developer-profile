@@ -1,3 +1,40 @@
+
+//Rating stars
+var emptyStar = '<i class="fa fa-star-o fa-yellow" aria-hidden="true"></i>';
+var fullStar = '<i class="fa fa-star fa-yellow" aria-hidden="true"></i>';
+var halfStar = '<i class="fa fa-star-half-o fa-yellow" aria-hidden="true"></i>';
+
+
+var starsGenerator = function (number) {
+    var isInteger = number % 1 === 0;
+    // console.log('isInteger', isInteger);
+
+    if (isInteger) {
+        var result = '';
+        for (var i = 0; i < number; i++) {
+            result = result + fullStar
+        }
+        var resultEmpty = '';
+        for (var i = 0; i < (5 - number); i++) {
+            resultEmpty = resultEmpty + emptyStar
+        }
+        return result + resultEmpty
+    }
+
+    else {
+        var result = '';
+        for (var i = 0; (i + 1) < number; i++) {
+            result = `${result} ${fullStar}`
+        }
+        var roundNumber = Math.ceil(number);
+        var resultEmpty = '';
+        for (var i = 0; i < (5 - roundNumber); i++) {
+            resultEmpty = resultEmpty + emptyStar
+        }
+        return result + halfStar + resultEmpty
+    }
+};
+
 var tagsGenerator = function (tags, className) {
     var projectTags = '';
 
@@ -20,16 +57,25 @@ $(document).ready(function () {
     $.get('./js/data.json/', function (data) {
         data.mySkills.forEach(function (skill) {
             console.log("mySkills");
-            $('.filter__input-tag').append(
-                '<li class="filter__tag" id="' + skill.name + '">' + skill.name + '</li>'
-            );
+            //these are duplicity filter tags
+            // $('.filter__input-tag').append(
+            //     '<li class="filter__tag" id="' + skill.name + '">' + skill.name + '</li>'
+            // );
 
 
             $('.footer__input-star').append(
                 '<li><div class=""><div class="footer__tag">' + skill.name + '</div><div class="footer__star">' +
-                '<ul class="ratingSM o' + skill.rating + 'star"><li class="one">1</li><li class="two">2</li>' +
-                '<li class="three">3</li><li class="four">4</li><li class="five">5</li></ul></div></div></li>'
+                starsGenerator(skill.rating) + '</div></li>'
             )
+
+            // origin code for footer skills and stars
+            // $('.footer__input-star').append(
+            //     '<li><div class=""><div class="footer__tag">' + skill.name + '</div><div class="footer__star">' +
+            //     '<ul class="ratingSM o' + skill.rating + 'star"><li class="one">1</li><li class="two">2</li>' +
+            //     '<li class="three">3</li><li class="four">4</li><li class="five">5</li></ul></div></div></li>'
+            // )
+
+
 
 
         }); //konec forEach

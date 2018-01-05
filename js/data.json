@@ -7,7 +7,7 @@
     },
     {
       "name": "Sass",
-      "rating": 25
+      "rating": 2.5
     },
     {
       "name": "JavaScript",
@@ -19,19 +19,19 @@
     },
     {
       "name": "jQuery",
-      "rating": 15
+      "rating": 1.5
     },
     {
       "name": "GIT",
-      "rating": 25
+      "rating": 2
     },
     {
       "name": "SEO",
-      "rating": 35
+      "rating": 3.5
     },
     {
       "name": "ResponsiveDesign",
-      "rating": 3
+      "rating": 2.5
     },
     {
       "name": "WordPress",

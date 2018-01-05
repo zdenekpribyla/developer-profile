@@ -7,6 +7,7 @@ $dark-grey: #595959;
 $light-grey: #f7f7f7;
 $blue: #4d9abf;
 $tyrkys: #00c7b7;
+$yellow: #eeb500;
 $font-title: 'Roboto Slab', serif;
 $font-text: 'Roboto', sans-serif;
 $font-size: 16px;
@@ -64,6 +65,10 @@ ul {
 
 .fa-grey {
   color: $white;
+}
+
+.fa-yellow {
+ color: $yellow;
 }
 
 .header {
@@ -307,10 +312,11 @@ h1 strong {
     font-weight: bold;
   }
   &__tag {
-    background-color: $black;
+    background-color: $dark-grey;
     padding: 3px 7px;
     color: white;
-    margin: 0 0 5px 0;
+    margin: 0 10px 5px 0;
+    border-radius: 5px;
     display: inline-block;
   }
   &__star {
@@ -324,63 +330,6 @@ h1 strong {
 
 .col__inside {
   padding: 20px;
-}
-
-.ratingSM {
-  width: 80px;
-  height: 16px;
-  margin: 0 0 4px 7px;
-  padding: 0;
-  list-style: none;
-  clear: both;
-  position: relative;
-  background: url('http://pribyla.com/images/hvezdy-hodnoceni.png') no-repeat 0 0;
-}
-
-.o5star {
-  background-position: 0 -320px;
-}
-
-.o45star {
-  background-position: 0 -304px;
-}
-
-.o4star {
-  background-position: 0 -288px;
-}
-
-.o35star {
-  background-position: 0 -272px;
-}
-
-.o3star {
-  background-position: 0 -255px;
-}
-
-.o25star {
-  background-position: 0 -240px;
-}
-
-.o2star {
-  background-position: 0 -224px;
-}
-
-.o15star {
-  background-position: 0 -208px;
-}
-
-.o1star {
-  background-position: 0 -192px;
-}
-
-.o05star {
-  background-position: 0 -176px;
-}
-
-ul.ratingSM li {
-  cursor: pointer;
-  float: left;
-  text-indent: -999em;
 }
 
 .hide--selector {
