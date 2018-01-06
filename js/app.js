@@ -1,4 +1,3 @@
-
 var footerTagGenerator = function (skillName, className) {
     return '<div class="' + className + '">' + skillName + '</div>'
 };
@@ -57,6 +56,15 @@ var tagsGenerator = function (tags, className) {
     return projectTags
 };
 
+var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName, titleClassName, titleText, linkClassName, url) {
+    var resultUrlGenerator = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
+        + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '"><a target="_blank" href="' + url + '">' +
+        url + '</a></span></div>';
+
+    return resultUrlGenerator;
+
+};
+
 $(document).ready(function () {
 
     $.get('./js/data.json/', function (data) {
@@ -85,8 +93,6 @@ $(document).ready(function () {
             // )
 
 
-
-
         }); //konec forEach
 
         $('.filter__input-tag').append(
@@ -97,19 +103,33 @@ $(document).ready(function () {
         // console.log(data);
         data.myProjects.forEach(function (project) {
 
-
             console.log('-----------------');
             console.log('nazev projektu: ' + project.name);
             $('.main__list').append(
                 '<div class="project">' +
                 '<h3 class="project__title">' + project.name + '</h3>' +
                 '<p class="project__description">' + project.description + '</p>' +
-                '<div class="project__detail"><div class="single__detail"><i class="fa fa-github-alt"></i><span class="project__detail__span">  GitHub: </span> ' +
-                '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  Demo: </span> ' +
-                '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
+                '<div class="project__detail">' +
+                projectDetailUrlGenerator("single__detail", "fa-github-alt", "project__detail__span", " GitHub", "link", project.html_url) +
+                projectDetailUrlGenerator("single__detail", "fa-link", "project__detail__span", " Demo", "link", project.demo_url) +
                 '<div class="project_tag"><i class="fa fa-github-alt"></i><span class="project__detail__span">  Used Skills  </span>' + tagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
+
+
             console.log(project.tags);
+
+            // console.log('-----------------');
+            // console.log('nazev projektu: ' + project.name);
+            // $('.main__list').append(
+            //     '<div class="project">' +
+            //     '<h3 class="project__title">' + project.name + '</h3>' +
+            //     '<p class="project__description">' + project.description + '</p>' +
+            //     '<div class="project__detail"><div class="single__detail"><i class="fa fa-github-alt"></i><span class="project__detail__span">  GitHub: </span> ' +
+            //     '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><i class="fa fa-link"></i><span class="project__detail__span">  Demo: </span> ' +
+            //     '<span class="link"><a target="_blank" class="link" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
+            //     '<div class="project_tag"><i class="fa fa-github-alt"></i><span class="project__detail__span">  Used Skills  </span>' + tagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+            //     '</div>');
+            // console.log(project.tags);
 
 
             // pridava .hide--selector uplne kazdemu projektu misto jen tomu jednomu
