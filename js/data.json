@@ -149,7 +149,7 @@
         "jQuery",
         "GIT"
       ],
-      "demo_url": null,
+      "demo_url": "",
       "owner": {
         "login": "zdenekpribyla",
         "id": 31103727,
@@ -246,7 +246,7 @@
         "JavaScript",
         "GIT"
       ],
-      "demo_url": null,
+      "demo_url": "",
       "owner": {
         "login": "zdenekpribyla",
         "id": 31103727,
@@ -438,7 +438,7 @@
         "NodeJS",
         "GIT"
       ],
-      "demo_url": null,
+      "demo_url": "",
       "owner": {
         "login": "zdenekpribyla",
         "id": 31103727,
@@ -727,8 +727,8 @@
         "WordPress"
       ],
       "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. All visitors are from SERP.",
-      "html_url": null,
-      "demo_url": "private"
+      "html_url": "",
+      "demo_url": null
     },
     {
       "name": "Eshop vasetapety.cz",
@@ -739,7 +739,7 @@
         "SEO"
       ],
       "description": "Eshop with wallpapers, mostly bespoke products. Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
-      "html_url": null,
+      "html_url": "",
       "demo_url": "https://www.vasetapety.cz"
     },
     {
@@ -752,7 +752,7 @@
         "SEO"
       ],
       "description": "Eshop with ties and bow ties. Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
-      "html_url": null,
+      "html_url": "",
       "demo_url": "https://vasekravaty.cz"
     }
   ]

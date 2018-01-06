@@ -57,9 +57,21 @@ var tagsGenerator = function (tags, className) {
 };
 
 var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName, titleClassName, titleText, linkClassName, url) {
-    var resultUrlGenerator = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
-        + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '"><a target="_blank" href="' + url + '">' +
-        url + '</a></span></div>';
+
+    var resultUrlGenerator;
+    if (url === "") {
+        resultUrlGenerator = ""
+    }
+    else if (url === null) {
+        resultUrlGenerator = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
+            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '">private url</span></div>';
+    }
+
+    else {
+        resultUrlGenerator = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
+            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '"><a target="_blank" href="' + url + '">' +
+            url + '</a></span></div>';
+    }
 
     return resultUrlGenerator;
 
