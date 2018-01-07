@@ -131,7 +131,7 @@ $(document).ready(function () {
                 '<div class="project__detail">' +
                 projectDetailUrlGenerator("single__detail", "fa-github-alt", "project__detail__span", " GitHub", "link", project.html_url) +
                 projectDetailUrlGenerator("single__detail", "fa-link", "project__detail__span", " Demo", "link", project.demo_url) +
-                '<div class="project_tag"><i class="fa fa-github-alt"></i><span class="project__detail__span">  Used Skills  </span>' + tagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__detail__span">  Used Skills  </span>' + tagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
 
 
