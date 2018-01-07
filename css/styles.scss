@@ -168,16 +168,16 @@ h1 strong {
     float: left;
     background-color: $black;
     border: solid 1px $grey;
+    border-radius: 2px;
     padding: 5px 7px;
     margin: 5px 10px;
-    color: white;
+    color: $white;
     cursor: pointer;
     user-select: none;
-    transition-delay: 80ms;
+    transition: 0.3s;
 
     &:hover {
       background-color: $blue;
-      color: $white;
     }
   }
   &--selected {

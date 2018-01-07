@@ -59,18 +59,25 @@ var tagsGenerator = function (tags, className) {
 var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName, titleClassName, titleText, linkClassName, url) {
 
     var resultUrlGenerator;
-    if (url === "") {
-        resultUrlGenerator = ""
+    if (url === ""
+        || typeof url === "object"
+        || typeof url === "boolean"
+        || typeof url === "function"
+        || typeof url === "number"
+        || typeof url === "undefined") {
+        resultUrlGenerator = "";
     }
-    else if (url === null) {
+
+    else if (url.indexOf("http") >= 0) {  //possible to use => url.include("http") === true
         resultUrlGenerator = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
-            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '">private url</span></div>';
+            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '"><a target="_blank" href="' + url + '">' +
+            url + '</a></span></div>';
     }
 
     else {
         resultUrlGenerator = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
-            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '"><a target="_blank" href="' + url + '">' +
-            url + '</a></span></div>';
+            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '">private url</span></div>';
+        console.log('spustil se private url');
     }
 
     return resultUrlGenerator;
