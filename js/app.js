@@ -121,7 +121,7 @@ $(document).ready(function () {
                 '</div>');
 
 
-            console.log(project.tags);
+            // console.log(project.tags);
 
         });
 
@@ -129,27 +129,29 @@ $(document).ready(function () {
         var filterTags = $('.filter__tag');
         filterTags.click(function () {
             var that = $(this);
-            if ($(this).hasClass('filter--selected')) {
+            if ($(that).hasClass('filter--selected')) {
 
                 $('.filter__title').text('All Projects');
-                $(this).removeClass('filter--selected');
+                $(that).removeClass('filter--selected');
                 // console.log('remove class from active button');
                 $('.project').addClass('project--hide');
                 //console.log('show all projects');
 
+                data.myProjects.forEach(function (project) {
 
                     $('.main__list').append(
                         '<div class="project">' +
                         '<h3 class="project__title">' + project.name + '</h3>' +
                         '<p class="project__description">' + project.description + '</p>' +
-                        '<div class="project__detail"><div class="single__detail"><span class="project__detail__span"><i class="fa fa-github-alt"></i>  GitHub: </span> ' +
-                        '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
-                        '<span class="link"><a target="_blank" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
-                        '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                        '<div class="project__detail">' +
+                        projectDetailUrlGenerator("single__detail", "fa-github-alt", "project__detail__span", " GitHub", "link", project.html_url) +
+                        projectDetailUrlGenerator("single__detail", "fa-link", "project__detail__span", " Demo", "link", project.demo_url) +
+                        '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                         '</div>');
-
-
+                })
             }
+
+
             else {
                 $('.filter__title').text('Projects Using ' + $(this).text());
                 filterTags.removeClass('filter--selected');
@@ -165,30 +167,28 @@ $(document).ready(function () {
 
                     project.tags.forEach(function (singleTag) {
 
-
-
                         if (singleTag === that.attr('id')) {
                             //console.log(singleProject);
                             $('.main__list').append(
                                 '<div class="project">' +
                                 '<h3 class="project__title">' + project.name + '</h3>' +
                                 '<p class="project__description">' + project.description + '</p>' +
-                                '<div class="project__detail"><div class="single__detail"><span class="project__detail__span"><i class="fa fa-github-alt"></i>  GitHub: </span> ' +
-                                '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
-                                '<span class="link"><a target="_blank" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
-                                '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                                '<div class="project__detail">' +
+                                projectDetailUrlGenerator("single__detail", "fa-github-alt", "project__detail__span", " GitHub", "link", project.html_url) +
+                                projectDetailUrlGenerator("single__detail", "fa-link", "project__detail__span", " Demo", "link", project.demo_url) +
+                                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__detail__span">  Used Skills  </span>' +
+                                filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                                 '</div>');
 
                         }
                     })
                 })
             }
-        });
-
+        })
     });
 
 
-    // alternative solution: https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
+// alternative solution: https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
     $('.main__list').on('click', '.project__btn', function () {
         console.log('click button');
         var projectDetail = $(this).parent().find('.project__detail');
@@ -209,7 +209,7 @@ $(document).ready(function () {
     });
 
 
-    //Check to see if the window is top if not then display button
+//Check to see if the window is top if not then display button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scroll-to-top').fadeIn();
@@ -218,14 +218,15 @@ $(document).ready(function () {
         }
     });
 
-    //Click event to scroll to top
+//Click event to scroll to top
     $('.scroll-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 800);
         return false;
     });
 
 
-});
+})
+;
 
 
 // api of gitHub projects: https://api.github.com/users/zdenekpribyla/repos
