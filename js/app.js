@@ -136,7 +136,7 @@ $(document).ready(function () {
                 // console.log('remove class from active button');
                 $('.project').addClass('project--hide');
                 //console.log('show all projects');
-                data.myProjects.forEach(function (project) {
+
 
                     $('.main__list').append(
                         '<div class="project">' +
@@ -148,7 +148,7 @@ $(document).ready(function () {
                         '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                         '</div>');
 
-                });
+
             }
             else {
                 $('.filter__title').text('Projects Using ' + $(this).text());
@@ -161,25 +161,27 @@ $(document).ready(function () {
                 // ==> add .map for tags and after .filter for projects with specific tag
 
                 //console.log(data);
-                for (var i = 0; i < data.myProjects.length; i++) {
-                    var singleProject = data.myProjects[i];
-                    for (var index = 0; index < singleProject.tags.length; index++) {
-                        var singleTag = singleProject.tags[index];
+                data.myProjects.forEach(function (project) {
+
+                    project.tags.forEach(function (singleTag) {
+
+
+
                         if (singleTag === that.attr('id')) {
                             //console.log(singleProject);
                             $('.main__list').append(
                                 '<div class="project">' +
-                                '<h3 class="project__title">' + singleProject.name + '</h3>' +
-                                '<p class="project__description">' + singleProject.description + '</p>' +
+                                '<h3 class="project__title">' + project.name + '</h3>' +
+                                '<p class="project__description">' + project.description + '</p>' +
                                 '<div class="project__detail"><div class="single__detail"><span class="project__detail__span"><i class="fa fa-github-alt"></i>  GitHub: </span> ' +
-                                '<span class="link"><a target="_blank" href="' + singleProject.html_url + '">' + singleProject.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
-                                '<span class="link"><a target="_blank" href="' + singleProject.demo_url + '">' + singleProject.demo_url + '</a></span></div>' +
+                                '<span class="link"><a target="_blank" href="' + project.html_url + '">' + project.html_url + '</a></span></div>' + '<div class="single__detail"><span class="project__detail__span"><i class="fa fa-link"></i>  URL (live or demo version): </span> ' +
+                                '<span class="link"><a target="_blank" href="' + project.demo_url + '">' + project.demo_url + '</a></span></div>' +
                                 '</div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                                 '</div>');
 
                         }
-                    }
-                }
+                    })
+                })
             }
         });
 
