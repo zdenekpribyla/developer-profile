@@ -281,6 +281,7 @@ h1 strong {
   background: $grey;
   width: auto;
   display: -webkit-box;
+  padding: 0 0 10px 0;
   &__container {
     margin: 0 auto;
     //background-color: red;
@@ -353,6 +354,14 @@ h1 strong {
 
 .scroll-to-top i:hover {
   background: linear-gradient(45deg, #32647c 0, #08a195 100%)
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  background: $black;
+  color: $light-grey;
+  padding: 5px 0;
 }
 
 @media only screen and (max-width: 767px) {
