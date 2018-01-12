@@ -55,8 +55,8 @@ ul {
   color: $black;
 }
 
-.link-phone {
-  color: $white
+.link-light-text {
+  color: $light-grey
 }
 
 .link-phone-footer {
@@ -68,11 +68,11 @@ ul {
 }
 
 .fa-yellow {
- color: $yellow;
+  color: $yellow;
 }
 
 .header {
-  background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
+  background: linear-gradient(45deg, $blue 0, $tyrkys 100%);
   text-align: center;
   padding: 29px 0;
 
@@ -123,7 +123,7 @@ h1 strong {
   &__align {
     text-align: center;
     & ul li {
-      color: $white;
+      color: $light-grey;
       display: inline-block;
       height: 45px;
       line-height: 45px;
@@ -132,23 +132,6 @@ h1 strong {
 
   &__contact {
     padding: 0 10px;
-  }
-}
-
-.benefits {
-  background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
-  z-index: 100;
-  text-align: center;
-  &__menu {
-
-    max-width: 1000px;
-    margin: 0 auto;
-    & ul li {
-      color: $white;
-      display: inline-block;
-      width: 33%;
-      padding: 20px 0;
-    }
   }
 }
 
@@ -216,15 +199,19 @@ h1 strong {
   &__description {
     display: inline-block;
   }
-  &__detail {
+  &__details {
     display: none;
     padding: 0 0 0 40px;
     text-align: left;
+  }
+  .project__single-detail {
+    padding: 7px 0;
     &__span {
       font-weight: bold;
       padding-left: 7px;
     }
   }
+
   &__tag {
     margin: 0 0 0 15px;
     &-single {
@@ -239,42 +226,34 @@ h1 strong {
 
   &__btn {
     text-align: center;
-    //margin: 10px 0 0 0;
-
-
     &-open {
       color: $dark-grey;
       cursor: pointer;
-      //background-color: red;
       &:hover {
         color: $blue;
-        //animation: shake 0.5s;
-        //animation-iteration-count: infinite;
       }
-      //@keyframes shake {
-      //  0% { transform: translate(1px, 1px) rotate(0deg); }
-      //  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      //  20% { transform: translate(-3px, 0px) rotate(1deg); }
-      //  30% { transform: translate(3px, 2px) rotate(0deg); }
-      //  40% { transform: translate(1px, -1px) rotate(1deg); }
-      //  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      //  60% { transform: translate(-3px, 1px) rotate(0deg); }
-      //  70% { transform: translate(3px, 1px) rotate(-1deg); }
-      //  80% { transform: translate(-1px, -1px) rotate(1deg); }
-      //  90% { transform: translate(1px, 2px) rotate(0deg); }
-      //  100% { transform: translate(1px, -2px) rotate(-1deg); }
-      //}
     }
   }
 
   &__btn-rotate {
     transform: rotate(180deg);
   }
-
 }
 
-.single__detail {
-  padding: 7px 0
+.benefits {
+  background: linear-gradient(45deg, $blue 0, $tyrkys 100%);
+  z-index: 100;
+  text-align: center;
+  &__menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    & ul li {
+      color: $white;
+      display: inline-block;
+      width: 33%;
+      padding: 20px 0;
+    }
+  }
 }
 
 .footer {
@@ -284,12 +263,14 @@ h1 strong {
   padding: 0 0 10px 0;
   &__container {
     margin: 0 auto;
-    //background-color: red;
     max-width: 1000px;
   }
   &__col-1 {
     float: left;
     width: 40%;
+    &-inside {
+      padding: 20px;
+    }
   }
   &__col {
     float: left;
@@ -323,17 +304,18 @@ h1 strong {
     display: inline-block;
     vertical-align: middle;
   }
-  &__skills {
-  }
-
-}
-
-.col__inside {
-  padding: 20px;
 }
 
 .hide--selector {
   display: none;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  background: $black;
+  color: $light-grey;
+  padding: 5px 0;
 }
 
 // SCROLL TO TOP BUTTON
@@ -354,14 +336,6 @@ h1 strong {
 
 .scroll-to-top i:hover {
   background: linear-gradient(45deg, #32647c 0, #08a195 100%)
-}
-
-.copyright {
-  text-align: center;
-  font-size: 14px;
-  background: $black;
-  color: $light-grey;
-  padding: 5px 0;
 }
 
 @media only screen and (max-width: 767px) {

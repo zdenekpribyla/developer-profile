@@ -114,10 +114,10 @@ $(document).ready(function () {
                 '<div class="project">' +
                 '<h3 class="project__title">' + project.name + '</h3>' +
                 '<p class="project__description">' + project.description + '</p>' +
-                '<div class="project__detail">' +
-                projectDetailUrlGenerator("single__detail", "fa-github-alt", "project__detail__span", " GitHub", "link", project.html_url) +
-                projectDetailUrlGenerator("single__detail", "fa-link", "project__detail__span", " Demo", "link", project.demo_url) +
-                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '<div class="project__details">' +
+                projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
+                projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " Demo", "link", project.demo_url) +
+                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
 
 
@@ -143,10 +143,10 @@ $(document).ready(function () {
                         '<div class="project">' +
                         '<h3 class="project__title">' + project.name + '</h3>' +
                         '<p class="project__description">' + project.description + '</p>' +
-                        '<div class="project__detail">' +
-                        projectDetailUrlGenerator("single__detail", "fa-github-alt", "project__detail__span", " GitHub", "link", project.html_url) +
-                        projectDetailUrlGenerator("single__detail", "fa-link", "project__detail__span", " Demo", "link", project.demo_url) +
-                        '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                        '<div class="project__details">' +
+                        projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
+                        projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " Demo", "link", project.demo_url) +
+                        '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                         '</div>');
                 })
             }
@@ -173,10 +173,10 @@ $(document).ready(function () {
                                 '<div class="project">' +
                                 '<h3 class="project__title">' + project.name + '</h3>' +
                                 '<p class="project__description">' + project.description + '</p>' +
-                                '<div class="project__detail">' +
-                                projectDetailUrlGenerator("single__detail", "fa-github-alt", "project__detail__span", " GitHub", "link", project.html_url) +
-                                projectDetailUrlGenerator("single__detail", "fa-link", "project__detail__span", " Demo", "link", project.demo_url) +
-                                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__detail__span">  Used Skills  </span>' +
+                                '<div class="project__details">' +
+                                projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
+                                projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " Demo", "link", project.demo_url) +
+                                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' +
                                 filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                                 '</div>');
 
@@ -191,7 +191,7 @@ $(document).ready(function () {
 // alternative solution: https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
     $('.main__list').on('click', '.project__btn', function () {
         console.log('click button');
-        var projectDetail = $(this).parent().find('.project__detail');
+        var projectDetail = $(this).parent().find('.project__details');
         $(projectDetail).toggle(450);
 
 
