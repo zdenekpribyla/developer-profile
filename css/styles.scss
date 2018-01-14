@@ -18,6 +18,7 @@ body {
   margin: 0;
   line-height: 1.6;
   background-color: $light-grey;
+  word-break: keep-all
 }
 
 h1 {
@@ -244,14 +245,20 @@ h1 strong {
   background: linear-gradient(45deg, $blue 0, $tyrkys 100%);
   z-index: 100;
   text-align: center;
+  padding: 0 0 30px 0;
+  &__col {
+    padding-top: 30px;
+  }
+
   &__menu {
     max-width: 1000px;
     margin: 0 auto;
+
     & ul li {
       color: $white;
       display: inline-block;
       width: 33%;
-      padding: 20px 0;
+      vertical-align: top;
     }
   }
 }
@@ -329,7 +336,7 @@ h1 strong {
 }
 
 .scroll-to-top i {
-  background: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
+  background: linear-gradient(45deg, $blue 0, $tyrkys 100%);
   padding: 10px;
   border-radius: 4px;
 }
@@ -339,6 +346,15 @@ h1 strong {
 }
 
 @media only screen and (max-width: 767px) {
+
+  h1 {
+    font-size: $font-size * 2;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
   .navbar {
     height: initial;
   }
@@ -354,8 +370,19 @@ h1 strong {
     }
   }
 
-  .benefits__menu ul li {
-    width: 100%;
+  .project__details {
+    padding: 0;
+  }
+
+  .benefits {
+
+    &__col {
+      padding: 30px 10px 0 10px;
+    }
+    &__menu ul li {
+      display: block;
+      width: 100%;
+    }
   }
 
   .footer {
@@ -365,7 +392,12 @@ h1 strong {
     &__col {
       width: 100%;
     }
+    &__statement {
+      padding: 0 10px;
+    }
   }
+
+  // Scroll to Top Button
   .scroll-to-top {
     position: fixed;
     bottom: 20px;
