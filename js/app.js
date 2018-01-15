@@ -88,7 +88,8 @@ var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName,
 
 $(document).ready(function () {
 
-    $.get('./js/data.json/', function (data) {
+    $.get('js/data.json', function (data) {
+        console.log("data is ready");
         data.mySkills.forEach(function (skill) {
             console.log("mySkills");
 
