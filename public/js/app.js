@@ -89,9 +89,9 @@ var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName,
 $(document).ready(function () {
 
     $.get('js/data.json', function (data) {
-        console.log("data is ready");
+        // console.log("data is ready");
         data.mySkills.forEach(function (skill) {
-            console.log("mySkills");
+            // console.log("mySkills");
 
             $('.footer__input-star').append(
                 '<div class="">' + footerTagGenerator(skill.name, "footer__tag") + '<div class="footer__star">' +
@@ -108,9 +108,7 @@ $(document).ready(function () {
 
         // console.log(data);
         data.myProjects.forEach(function (project) {
-
-            console.log('-----------------');
-            console.log('nazev projektu: ' + project.name);
+            
             $('.main__list').append(
                 '<div class="project">' +
                 '<h3 class="project__title">' + project.name + '</h3>' +
@@ -191,7 +189,7 @@ $(document).ready(function () {
 
 // alternative solution: https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
     $('.main__list').on('click', '.project__btn', function () {
-        console.log('click button');
+        // console.log('click button');
         var projectDetail = $(this).parent().find('.project__details');
         $(projectDetail).toggle(450);
 
