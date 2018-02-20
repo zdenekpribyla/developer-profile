@@ -225,7 +225,3 @@ $(document).ready(function () {
 
 
 })
-;
-
-
-// api of gitHub projects: https://api.github.com/users/zdenekpribyla/repos
