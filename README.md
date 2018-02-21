@@ -3,26 +3,28 @@
 > Developer profile website contains sum of auhtors's realized projects, skills rating and recent career resume.
 
 ## Goal of project
-Using of acquired programming skills
+Online presentation of acquired programming skills
 
+## Dependencies
+* [SASS](https://sass-lang.com/install)
+* http server (e.g [http-server](https://www.npmjs.com/package/http-server))
 ## Project setup
 * clone project from [github](https://github.com)
+```
+git clone https://github.com/zdenekpribyla/developer-profile
+cd developer-profile
+cd public
+```
 
+* build css from origin sass
 ```
-$ git clone https://github.com/zdenekpribyla/developer-profile/tree/develop/public
-$ cd public
+$ sass --watch css/styles.scss:css/styles.css
 ```
-* instal ruby 2.0 (because of sass)
+* start http server (e.g:)
 ```
-$ sudo apt-get install ruby2.0
-$ sudo apt-get install ruby2.0-dev
-$ sudo update-alternatives --install /usr/bin/gem gem /usr/bin/gem2.0 1
+http-server
 ```
-* isntall sass to css convert
-```
-$ sudo gem install sass --no-user-install
-$ sass --watch styles.scss:styles.css
-```
+* open offered IP in browser
 
 
 ## Auhtor
