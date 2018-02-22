@@ -78,7 +78,7 @@ var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName,
     else {
 
         typeOfUrlResult = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
-            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '">private url</span></div>';
+            + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '">on request available</span></div>';
         // console.log('spustil se private url');
     }
 
