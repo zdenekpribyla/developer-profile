@@ -108,7 +108,7 @@ $(document).ready(function () {
 
         // console.log(data);
         data.myProjects.forEach(function (project) {
-            
+
             $('.main__list').append(
                 '<div class="project">' +
                 '<h3 class="project__title">' + project.name + '</h3>' +
@@ -224,4 +224,14 @@ $(document).ready(function () {
     });
 
 
-})
+    console.log("%cHi Developer,\n\nI am glad to see you watch my code.\n\nDo not hesitate to get me a feedback via %czdenek.pribyla@gmail.com%c\n\nSee you", "color: #222", "color: #2d6986; font-weight: bold", "color: #222");
+    console.log('            _ _           _                            \n' +
+        '           (_) |         | |                           \n' +
+        ' _ __  _ __ _| |__  _   _| | __ _   ___ ___  _ __ ___  \n' +
+        '| \'_ \\| \'__| | \'_ \\| | | | |/ _` | / __/ _ \\| \'_ ` _ \\ \n' +
+        '| |_) | |  | | |_) | |_| | | (_| || (_| (_) | | | | | |\n' +
+        '| .__/|_|  |_|_.__/ \\__, |_|\\__,_(_)___\\___/|_| |_| |_|\n' +
+        '| |                  __/ |                             \n' +
+        '|_|                 |___/                              ')
+
+});
