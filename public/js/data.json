@@ -5,7 +5,7 @@
       "rating": 3
     },
     {
-      "name": "Sass",
+      "name": "CSS",
       "rating": 2.5
     },
     {
@@ -33,8 +33,8 @@
       "rating": 2.5
     },
     {
-      "name": "WordPress",
-      "rating": 3
+      "name": "goHugo",
+      "rating": 2.5
     }
   ],
   "myProjects": [
@@ -44,7 +44,7 @@
       "full_name": "zdenekpribyla/developer-profile",
       "tags": [
         "Html",
-        "Sass",
+        "CSS",
         "JavaScript",
         "jQuery",
         "GIT",
@@ -68,20 +68,7 @@
       "html_url": "https://github.com/zdenekpribyla/development-notes",
       "description": "My personal syntax notes help with projects development. It contain every interesting peace of code I used in my projects"
     },
-    {
-      "id": 102712516,
-      "name": "Display Price",
-      "full_name": "zdenekpribyla/display-price",
-      "tags": [
-        "Html",
-        "Sass",
-        "JavaScript",
-        "GIT"
-      ],
-      "demo_url": "",
-      "html_url": "https://github.com/zdenekpribyla/display-price",
-      "description": "Easy script displaying products price in affiliate website. Get price from json file."
-    },
+
     {
       "id": 100613085,
       "name": "Gas Calculator",
@@ -135,35 +122,54 @@
       "description": "Extension calculator for Z Skore parameter. Convert Z Score to other well-known statistical parameters"
     },
     {
+	  "id": 2993949503,
+	  "name": "one-click-more-link",
+	  "full_name": "zdenekpribyla/one-click-more-link",
+	  "tags": [
+		"Html",
+		"JavaScript",
+		"jQuery",
+		"GIT"
+	   ],
+	  "demo_url": "",
+	  "html_url": "https://github.com/zdenekpribyla/one-click-more-link",
+	  "description": "Click only to one button on your website and open more new windows (more links)"
+	},
+	{
       "name": "Affiliate Sites",
       "tags": [
         "Html",
-        "Sass",
-        "Responsive Design",
+        "CSS",
+        "JavaScript",
+		"jQuery",
+		"Responsive Design",
         "SEO",
-        "WordPress"
+        "goHugo"
       ],
-      "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. It is based on Wordpress but design is mostly styled by own css. There is a height level of SEO and linkbuilding used to get visitors from SERP.",
+      "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. It is based on Hugo static generator (originally on Wordpress) and design is styled by own css (no predefined themmplate). There is a height level of SEO and linkbuilding used to get visitors from SERP.",
       "html_url": "",
       "demo_url": "on request available"
     },
     {
-      "name": "Eshop vasetapety.cz",
+      "name": "Pro-vital.cz",
       "tags": [
         "Html",
-        "Sass",
+		"CSS",
+		"JavaScript",
+		"jQuery",
+		"goHugo",
         "Responsive Design",
         "SEO"
       ],
-      "description": "Eshop with wallpapers, mostly bespoke products. Eshop is based on rent eshop-rychle platform but there is lots of own design modification via css. Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
-      "html_url": "",
-      "demo_url": "https://www.vasetapety.cz"
+      "description": "Company website presentation based on goHugo static generator and getBootstrap. Beta version is hosted in Firebase. SEO for main keywords is optimized and ranking 1# on google.",
+      "html_url": "https://github.com/zdenekpribyla/pro-vital",
+      "demo_url": "https://pro-vital-acdd6.firebaseapp.com/"
     },
     {
       "name": "Eshop vasekravaty.cz",
       "tags": [
         "Html",
-        "Sass",
+        "CSS",
         "Responsive Design",
         "JavaScript",
         "SEO"

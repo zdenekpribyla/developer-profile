@@ -115,7 +115,7 @@ $(document).ready(function () {
                 '<p class="project__description">' + project.description + '</p>' +
                 '<div class="project__details">' +
                 projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
-                projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " Demo", "link", project.demo_url) +
+                projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
                 '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
 
@@ -144,7 +144,7 @@ $(document).ready(function () {
                         '<p class="project__description">' + project.description + '</p>' +
                         '<div class="project__details">' +
                         projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
-                        projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " Demo", "link", project.demo_url) +
+                        projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
                         '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                         '</div>');
                 })
@@ -174,7 +174,7 @@ $(document).ready(function () {
                                 '<p class="project__description">' + project.description + '</p>' +
                                 '<div class="project__details">' +
                                 projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
-                                projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " Demo", "link", project.demo_url) +
+                                projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
                                 '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' +
                                 filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                                 '</div>');
