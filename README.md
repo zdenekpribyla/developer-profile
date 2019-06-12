@@ -1,6 +1,6 @@
 # Developer Profile
 
-> Developer profile website contains sum of auhtors's realized projects, skills rating and recent career resume.
+> Developer profile website contains sum of some auhtors's realized projects, skills rating and recent career resume.
 
 ## Goal of project
 Online presentation of acquired programming skills
@@ -22,7 +22,7 @@ $ sass --watch css/styles.scss:css/styles.css
 ```
 * start http server (e.g:)
 ```
-http-server
+browser-sync
 ```
 * open offered IP in browser
 
