@@ -2,7 +2,7 @@
   "mySkills": [
     {
       "name": "Html",
-      "rating": 3
+      "rating": 2.5
     },
     {
       "name": "CSS",
@@ -14,7 +14,7 @@
     },
     {
       "name": "NodeJS",
-      "rating": 2
+      "rating": 1.5
     },
     {
       "name": "jQuery",
@@ -48,8 +48,7 @@
         "JavaScript",
         "jQuery",
         "GIT",
-        "Responsive Design",
-        "SEO"
+        "Responsive Design"
       ],
       "demo_url": "https://pribyla.com",
       "html_url": "https://github.com/zdenekpribyla/developer-profile",
@@ -68,7 +67,6 @@
       "html_url": "https://github.com/zdenekpribyla/development-notes",
       "description": "My personal syntax notes help with projects development. It contain every interesting peace of code I used in my projects"
     },
-
     {
       "id": 100613085,
       "name": "Gas Calculator",
@@ -122,31 +120,31 @@
       "description": "Extension calculator for Z Skore parameter. Convert Z Score to other well-known statistical parameters"
     },
     {
-	  "id": 2993949503,
-	  "name": "one-click-more-link",
-	  "full_name": "zdenekpribyla/one-click-more-link",
-	  "tags": [
-		"Html",
-		"JavaScript",
-		"jQuery",
-		"GIT"
-	   ],
-	  "demo_url": "",
-	  "html_url": "https://github.com/zdenekpribyla/one-click-more-link",
-	  "description": "Click only to one button on your website and open more new windows (more links)"
-	},
-	{
+      "id": 2993949503,
+      "name": "one-click-more-link",
+      "full_name": "zdenekpribyla/one-click-more-link",
+      "tags": [
+        "Html",
+        "JavaScript",
+        "jQuery",
+        "GIT"
+      ],
+      "demo_url": "",
+      "html_url": "https://github.com/zdenekpribyla/one-click-more-link",
+      "description": "Click only to one button on your website and open more new tabs in web browser. It is especially useful in affiliate, when visitor clicks on one link button and open website from more advertisers. This code hack Google Chrome restriction about multiply link"
+    },
+    {
       "name": "Affiliate Sites",
       "tags": [
         "Html",
         "CSS",
         "JavaScript",
-		"jQuery",
-		"Responsive Design",
+        "jQuery",
+        "Responsive Design",
         "SEO",
         "goHugo"
       ],
-      "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. It is based on Hugo static generator (originally on Wordpress) and design is styled by own css (no predefined themmplate). There is a height level of SEO and linkbuilding used to get visitors from SERP.",
+      "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. It is based on Hugo static generator (originally on Wordpress) and design is styled by own css (no predefined themeplate). There is a height level of SEO and linkbuilding used to get visitors from SERP. Also smart UX leads to high click-through rate on affiliate links",
       "html_url": "",
       "demo_url": "on request available"
     },
@@ -154,10 +152,10 @@
       "name": "Pro-vital.cz",
       "tags": [
         "Html",
-		"CSS",
-		"JavaScript",
-		"jQuery",
-		"goHugo",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "goHugo",
         "Responsive Design",
         "SEO"
       ],
