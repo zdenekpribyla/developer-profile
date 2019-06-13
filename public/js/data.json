@@ -14,7 +14,7 @@
     },
     {
       "name": "NodeJS",
-      "rating": 1.5
+      "rating": 1
     },
     {
       "name": "jQuery",
@@ -172,7 +172,7 @@
         "JavaScript",
         "SEO"
       ],
-      "description": "Eshop with ties and bow ties. Eshop is based on rent eshop-rychle platform but there is lots of own design modification via css. There are used some own scripts (tie color navigation, price benefits, redirect to homepage). Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
+      "description": "Eshop with ties and bow ties. Eshop is based on rented eshop-rychle platform but there is lots of own design modification via css. There are used some own scripts (tie color navigation, price benefits, redirect to homepage). Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
       "html_url": "",
       "demo_url": "https://vasekravaty.cz"
     }

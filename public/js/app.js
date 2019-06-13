@@ -105,6 +105,7 @@ $(document).ready(function () {
             filterAndProjectTagsGenerator(data.mySkills, 'filter__tag')
         );
 
+        
 
 
         data.myProjects.forEach(function (project) {
@@ -113,7 +114,7 @@ $(document).ready(function () {
             var prodesArray = (project.description).split(" ")
             numberOfCutWords = 10  // change number of trimmed words
             sliceA = prodesArray.slice(0, numberOfCutWords).join(' ')
-            sliceB = prodesArray.slice(numberOfCutWords + 1).join(' ')
+            sliceB = prodesArray.slice(numberOfCutWords).join(' ')
             divideProjectDescription = '<p class="project__description"><span class="project__description-a">' + sliceA + '</span><span class="project__description-three-dots">...</span><span class="project__description-b hide--selector">' + sliceB + '<span></p>'
 
 
@@ -140,11 +141,12 @@ $(document).ready(function () {
                 //console.log('show all projects');
 
                 data.myProjects.forEach(function (project) {
+
                     // divide project description on two part
                     var prodesArray = (project.description).split(" ")
                     numberOfCutWords = 10  // change number of trimmed words
                     sliceA = prodesArray.slice(0, numberOfCutWords).join(' ')
-                    sliceB = prodesArray.slice(numberOfCutWords + 1).join(' ')
+                    sliceB = prodesArray.slice(numberOfCutWords).join(' ')
                     divideProjectDescription = '<p class="project__description"><span class="project__description-a">' + sliceA + '</span><span class="project__description-three-dots">...</span><span class="project__description-b hide--selector">' + sliceB + '<span></p>'
 
                     $('.main__list').append(
@@ -176,7 +178,7 @@ $(document).ready(function () {
                     var prodesArray = (project.description).split(" ")
                     numberOfCutWords = 10  // change number of trimmed words
                     sliceA = prodesArray.slice(0, numberOfCutWords).join(' ')
-                    sliceB = prodesArray.slice(numberOfCutWords + 1).join(' ')
+                    sliceB = prodesArray.slice(numberOfCutWords).join(' ')
                     divideProjectDescription = '<p class="project__description"><span class="project__description-a">' + sliceA + '</span><span class="project__description-three-dots">...</span><span class="project__description-b hide--selector">' + sliceB + '<span></p>'
 
                     project.tags.forEach(function (singleTag) {
