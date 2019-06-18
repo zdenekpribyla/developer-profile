@@ -172,11 +172,11 @@ $(document).ready(function () {
                     singleClass = document.getElementsByClassName('project');
                     console.log(singleClass.length)
                     if (singleClass.length < 2) {
-                        $('.filter__title').text('Project Using ' + $(this).text());
+                        $('.filter__title').text('Project Using ' + $(that).text());
                         console.log('singular')
                     }
                     else {
-                        $('.filter__title').text('Projects Using ' + $(this).text());
+                        $('.filter__title').text('Projects Using ' + $(that).text());
                         console.log('plural')
                     }
                 }
