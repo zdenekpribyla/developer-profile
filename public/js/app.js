@@ -105,7 +105,7 @@ $(document).ready(function () {
             filterAndProjectTagsGenerator(data.mySkills, 'filter__tag')
         );
 
-        
+
 
 
         data.myProjects.forEach(function (project) {
@@ -133,11 +133,12 @@ $(document).ready(function () {
         filterTags.click(function () {
             var that = $(this);
             if ($(that).hasClass('filter--selected')) {
-
+                $('.project').remove()
                 $('.filter__title').text('All Projects');
-                $(that).removeClass('filter--selected');
+                $('.filter__tag').removeClass('filter--selected');
+                // $(that).addClass('filter--selected');
                 // console.log('remove class from active button');
-                $('.project').addClass('project--hide');
+                // $('.project').addClass('project--hide');
                 //console.log('show all projects');
 
                 data.myProjects.forEach(function (project) {
@@ -163,42 +164,56 @@ $(document).ready(function () {
 
 
             else {
-                $('.filter__title').text('Projects Using ' + $(this).text());
-                filterTags.removeClass('filter--selected');
-                // console.log('remove class .filter__selected everywhere');
+                $('.project').remove()
+                $('.filter__tag').removeClass('filter--selected');
                 $(this).addClass('filter--selected');
-                // console.log('add class filter__selected on that button');
-                $('.project').addClass('project--hide');
-                //console.log('remove all projects');
-                // ==> add .map for tags and after .filter for projects with specific tag
 
-                //console.log(data);
-                data.myProjects.forEach(function (project) {
-                    // divide project description on two part
-                    var prodesArray = (project.description).split(" ")
-                    numberOfCutWords = 10  // change number of trimmed words
-                    sliceA = prodesArray.slice(0, numberOfCutWords).join(' ')
-                    sliceB = prodesArray.slice(numberOfCutWords).join(' ')
-                    divideProjectDescription = '<p class="project__description"><span class="project__description-a">' + sliceA + '</span><span class="project__description-three-dots">...</span><span class="project__description-b hide--selector">' + sliceB + '<span></p>'
+                function singleOrPluralProject() {
+                    singleClass = document.getElementsByClassName('project');
+                    console.log(singleClass.length)
+                    if (singleClass.length < 2) {
+                        $('.filter__title').text('Project Using ' + $(this).text());
+                        console.log('singular')
+                    }
+                    else {
+                        $('.filter__title').text('Projects Using ' + $(this).text());
+                        console.log('plural')
+                    }
+                }
 
-                    project.tags.forEach(function (singleTag) {
+                function createHtmlOfProject(callback) {
+                    data.myProjects.forEach(function (project) {
+                        // divide project description on two part
+                        var prodesArray = (project.description).split(" ")
+                        numberOfCutWords = 10  // change number of trimmed words
+                        sliceA = prodesArray.slice(0, numberOfCutWords).join(' ')
+                        sliceB = prodesArray.slice(numberOfCutWords).join(' ')
+                        divideProjectDescription = '<p class="project__description"><span class="project__description-a">' + sliceA + '</span><span class="project__description-three-dots">...</span><span class="project__description-b hide--selector">' + sliceB + '<span></p>'
 
-                        if (singleTag === that.attr('id')) {
-                            //console.log(singleProject);
-                            $('.main__list').append(
-                                '<div class="project">' +
-                                '<h3 class="project__title">' + project.name + '</h3>' +
-                                divideProjectDescription +
-                                '<div class="project__details">' +
-                                projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
-                                projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
-                                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' +
-                                filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
-                                '</div>');
+                        project.tags.forEach(function (singleTag) {
 
-                        }
+                            if (singleTag === that.attr('id')) {
+                                //console.log(singleProject);
+                                $('.main__list').append(
+                                    '<div class="project">' +
+                                    '<h3 class="project__title">' + project.name + '</h3>' +
+                                    divideProjectDescription +
+                                    '<div class="project__details">' +
+                                    projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
+                                    projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
+                                    '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' +
+                                    filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                                    '</div>');
+
+                            }
+                        })
                     })
-                })
+                    callback()
+
+                }
+                createHtmlOfProject(singleOrPluralProject)
+
+
             }
         })
     });
@@ -279,7 +294,7 @@ $(document).ready(function () {
 
 
 
-    console.log("%cHi Developer,\n\nI am glad to see you watch my code.\n\nDo not hesitate to get me a feedback via %czdenek.pribyla@gmail.com%c\n\nSee you", "color: #222", "color: #2d6986; font-weight: bold", "color: #222");
+    console.log("%cHi Visitor,\n\nI am glad to see you watch my code.\n\nDo not hesitate to get me a feedback via %czdenek.pribyla@gmail.com%c\n\nSee you", "color: #222", "color: #2d6986; font-weight: bold", "color: #222");
     // console.log('            _ _           _                            \n' +
     //     '           (_) |         | |                           \n' +
     //     ' _ __  _ __ _| |__  _   _| | __ _   ___ ___  _ __ ___  \n' +
