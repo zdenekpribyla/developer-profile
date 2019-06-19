@@ -42,9 +42,6 @@ var filterAndProjectTagsGenerator = function (tags, className) {
 
     var projectTags = '';
     tags.forEach(function (singleTag) {
-        // console.log('tag: ' + singleTag); // az sem to je dobre
-        //
-        // console.log('type of tags', typeof singleTag);
 
         if (typeof singleTag === 'object') {
             singleTag = singleTag.name
@@ -68,7 +65,7 @@ var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName,
         typeOfUrlResult = "";
     }
 
-    else if (url.indexOf("http") >= 0) {  //possible to use => url.include("http") === true
+    else if (url.indexOf("http") >= 0) {  //possible to use:  url.include("http")
 
         typeOfUrlResult = '<div class="' + projectDetailClassName + '"><i class="fa ' + iconClassName + '"></i><span class="'
             + titleClassName + '">' + titleText + ': </span><span class="' + linkClassName + '"><a target="_blank" href="' + url + '">' +
@@ -104,9 +101,14 @@ $(document).ready(function () {
         $('.filter__input-tag').append(
             filterAndProjectTagsGenerator(data.mySkills, 'filter__tag')
         );
-
-
-
+        
+        
+        $('.filter__tag').mouseenter(function(){  
+            $(this).addClass('false--hover');  
+        }); 
+        $('.filter__tag').mouseout(function(){  
+            $(this).removeClass('false--hover');  
+        }); 
 
         data.myProjects.forEach(function (project) {
 
@@ -133,14 +135,11 @@ $(document).ready(function () {
         filterTags.click(function () {
             var that = $(this);
             if ($(that).hasClass('filter--selected')) {
+            
                 $('.project').remove()
                 $('.filter__title').text('All Projects');
                 $('.filter__tag').removeClass('filter--selected');
-                // $(that).addClass('filter--selected');
-                // console.log('remove class from active button');
-                // $('.project').addClass('project--hide');
-                //console.log('show all projects');
-
+                $('.filter__tag').removeClass('false--hover');
                 data.myProjects.forEach(function (project) {
 
                     // divide project description on two part
@@ -170,14 +169,11 @@ $(document).ready(function () {
 
                 function singleOrPluralProject() {
                     singleClass = document.getElementsByClassName('project');
-                    console.log(singleClass.length)
                     if (singleClass.length < 2) {
                         $('.filter__title').text('Project Using ' + $(that).text());
-                        console.log('singular')
                     }
                     else {
                         $('.filter__title').text('Projects Using ' + $(that).text());
-                        console.log('plural')
                     }
                 }
 
