@@ -1,4 +1,32 @@
 {
+  "contacts": [
+    {
+      "name": "email",
+      "value": "zdenek.pribyla@gmail.com",
+      "link": ""
+    },
+    {
+      "name": "phone",
+      "value": "+420 736 400 189",
+      "link": ""
+    },
+    {
+      "name": "linkedin",
+      "value": "LinkedIn",
+      "link": "https://www.linkedin.com/in/zdenekpribyla/"
+    },
+    {
+      "name": "github",
+      "value": "GitHub",
+      "link": "https://github.com/zdenekpribyla"
+    },
+    {
+      "name": "personalurl",
+      "value": "pribyla.com",
+      "link": "https://pribyla.com"
+    }
+  ],
+
   "mySkills": [
     {
       "name": "Html",
