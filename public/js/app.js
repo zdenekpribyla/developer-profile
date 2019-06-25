@@ -86,23 +86,21 @@ var projectDetailUrlGenerator = function (projectDetailClassName, iconClassName,
 
 $(document).ready(function () {
 
+
     $.get('js/data.json', function (data) {
+
+
         
         // add contacts dynamicly from .json
         data.contacts.forEach(function(contact) {
             var contactLink = contact.link
             if ( contact.name === 'phone' ) {
-                $('.contacts--phone').append(
-                    contact.value
-                )
+                $('.contacts--phone').append(contact.value)
             }
             if ( contact.name === 'email') {
-                $('.contacts--email').append(
-                    contact.value
-                )
+                $('.contacts--email').append(contact.value)
             }
             if ( contact.name === 'linkedin') {
-                
                 $('.menu__contact-linkedin').attr('href', contactLink)
                 $('.contacts--linkedin').append(contact.value)
             }
@@ -116,7 +114,6 @@ $(document).ready(function () {
             }
         })
 
-        // console.log("data is ready");
         data.mySkills.forEach(function (skill) {
             // console.log("mySkills");
 
@@ -131,14 +128,16 @@ $(document).ready(function () {
         $('.filter__input-tag').append(
             filterAndProjectTagsGenerator(data.mySkills, 'filter__tag')
         );
-        
-        
+
         $('.filter__tag').mouseenter(function(){  
-            $(this).addClass('false--hover');  
+            $(this).addClass('false--hover'); 
+            console.log('go to the tag') 
         }); 
         $('.filter__tag').mouseout(function(){  
-            $(this).removeClass('false--hover');  
-        }); 
+            $(this).removeClass('false--hover');
+            console.log('quit the tag')  
+        });
+         
 
         data.myProjects.forEach(function (project) {
 
