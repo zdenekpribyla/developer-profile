@@ -93,24 +93,12 @@ $(document).ready(function () {
         
         // add contacts dynamicly from .json
         data.contacts.forEach(function(contact) {
+            var contactName = contact.name
             var contactLink = contact.link
-            if ( contact.name === 'phone' ) {
-                $('.contacts--phone').append(contact.value)
-            }
-            if ( contact.name === 'email') {
-                $('.contacts--email').append(contact.value)
-            }
-            if ( contact.name === 'linkedin') {
-                $('.menu__contact-linkedin').attr('href', contactLink)
-                $('.contacts--linkedin').append(contact.value)
-            }
-            if ( contact.name === 'github') {
-                $('.menu__contact-github').attr('href', contactLink)
-                $('.contacts--github').append(contact.value)
-            }
-            if ( contact.name === 'personalurl') {
-                $('.menu__contact-personalurl').attr('href', contactLink)
-                $('.contacts--personalurl').append(contact.value)
+
+            $('.contacts--' + contactName).append(contact.value)
+            if ( contactLink ) {
+                $('.contact--url-' + contactName).attr('href', contactLink)
             }
         })
 

@@ -11,6 +11,11 @@
       "link": ""
     },
     {
+      "name": "map",
+      "value": "Ostrava City, Czech Republic",
+      "link": "https://www.google.com/maps/place/Ostrava/@49.819657,18.0973118,11z/data=!3m1!4b1!4m5!3m4!1s0x4711586a3124e79d:0x891973fb9f9e9144!8m2!3d49.8209226!4d18.2625243"
+    },
+    {
       "name": "linkedin",
       "value": "LinkedIn",
       "link": "https://www.linkedin.com/in/zdenekpribyla/"
@@ -80,7 +85,7 @@
       ],
       "demo_url": "https://pribyla.com",
       "html_url": "https://github.com/zdenekpribyla/developer-profile",
-      "description": "Creating my personal web presentation with portofolio of my IT developer projects."
+      "description": "Creating my personal web presentation with portofolio of my IT developer projects. Most of content is dynamicly loaded from .json file and composited by JavaScript."
     },
     {
       "id": 108530229,
@@ -93,7 +98,7 @@
       ],
       "demo_url": "",
       "html_url": "https://github.com/zdenekpribyla/development-notes",
-      "description": "My personal syntax notes help with projects development. It contain every interesting peace of code I used in my projects"
+      "description": "My personal syntax notes help with projects development. It contain every interesting peace of code I used in my projects."
     },
     {
       "id": 100613085,
@@ -145,7 +150,7 @@
       ],
       "demo_url": "http://z-convert.pribyla.com",
       "html_url": "https://github.com/zdenekpribyla/z-score-convert",
-      "description": "Extension calculator for Z Skore parameter. Convert Z Score to other well-known statistical parameters"
+      "description": "Extension calculator for Z Skore parameter. Convert Z Score to other well-known statistical parameters."
     },
     {
       "id": 2993949503,
@@ -159,7 +164,7 @@
       ],
       "demo_url": "",
       "html_url": "https://github.com/zdenekpribyla/one-click-more-link",
-      "description": "Click only to one button on your website and open more new tabs in web browser. It is especially useful in affiliate, when visitor clicks on one link button and open website from more advertisers. This code hack Google Chrome restriction about multiply link"
+      "description": "Click only to one button on your website and open more new tabs in web browser. It is especially useful in affiliate, when visitor clicks on one link button and open website from more advertisers. This code hack Google Chrome restriction about multiply link."
     },
     {
       "name": "Affiliate Sites",
@@ -172,7 +177,7 @@
         "SEO",
         "goHugo"
       ],
-      "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. It is based on Hugo static generator (originally on Wordpress) and design is styled by own css (no predefined themeplate). There is a height level of SEO and linkbuilding used to get visitors from SERP. Also smart UX leads to high click-through rate on affiliate links",
+      "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. It is based on Hugo static generator (originally on Wordpress) and design is styled by own css (no predefined themeplate). There is a height level of SEO and linkbuilding used to get visitors from SERP. Also smart UX leads to high click-through rate on affiliate links.",
       "html_url": "",
       "demo_url": "on request available"
     },
