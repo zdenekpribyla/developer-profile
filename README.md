@@ -8,6 +8,7 @@ Online presentation of acquired programming skills
 ## Dependencies
 * [SASS](https://sass-lang.com/install)
 * http server (e.g [http-server](https://www.npmjs.com/package/http-server))
+
 ## Project setup
 * clone project from [github](https://github.com)
 ```

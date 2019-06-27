@@ -34,39 +34,48 @@
 
   "mySkills": [
     {
-      "name": "Html",
+      "id": "html",
+      "name": "HTML",
       "rating": 2.5
     },
     {
+      "id": "css",
       "name": "CSS",
       "rating": 2.5
     },
     {
+      "id": "javascript",
       "name": "JavaScript",
       "rating": 2
     },
     {
+      "id": "nodejs",
       "name": "NodeJS",
       "rating": 1
     },
     {
+      "id": "jquery",
       "name": "jQuery",
       "rating": 1.5
     },
     {
+      "id": "git",
       "name": "GIT",
       "rating": 2
     },
     {
+      "id": "seo",
       "name": "SEO",
       "rating": 3.5
     },
     {
+      "id": "responsivedesign",
       "name": "Responsive Design",
       "rating": 2.5
     },
     {
-      "name": "goHugo",
+      "id": "hugo",
+      "name": "Hugo",
       "rating": 2.5
     }
   ],
@@ -76,12 +85,12 @@
       "name": "Developer Profile Website",
       "full_name": "zdenekpribyla/developer-profile",
       "tags": [
-        "Html",
-        "CSS",
-        "JavaScript",
-        "jQuery",
-        "GIT",
-        "Responsive Design"
+        "html",
+        "css",
+        "javascript",
+        "jquery",
+        "git",
+        "responsivedesign"
       ],
       "demo_url": "https://pribyla.com",
       "html_url": "https://github.com/zdenekpribyla/developer-profile",
@@ -92,9 +101,9 @@
       "name": "Development Notes",
       "full_name": "zdenekpribyla/development-notes",
       "tags": [
-        "JavaScript",
-        "jQuery",
-        "GIT"
+        "javascript",
+        "jquery",
+        "git"
       ],
       "demo_url": "",
       "html_url": "https://github.com/zdenekpribyla/development-notes",
@@ -105,9 +114,9 @@
       "name": "Gas Calculator",
       "full_name": "zdenekpribyla/gas-calculator",
       "tags": [
-        "Html",
-        "JavaScript",
-        "GIT"
+        "html",
+        "javascript",
+        "git"
       ],
       "demo_url": "http://gas-calculator.pribyla.com",
       "html_url": "https://github.com/zdenekpribyla/gas-calculator",
@@ -118,9 +127,9 @@
       "name": "Node.js Playground",
       "full_name": "zdenekpribyla/nodejs-playground",
       "tags": [
-        "JavaScript",
-        "NodeJS",
-        "GIT"
+        "javascript",
+        "nodejs",
+        "git"
       ],
       "demo_url": "",
       "html_url": "https://github.com/zdenekpribyla/nodejs-playground",
@@ -131,9 +140,9 @@
       "name": "Z Score Calculator",
       "full_name": "zdenekpribyla/z-score-calculator",
       "tags": [
-        "Html",
-        "JavaScript",
-        "GIT"
+        "html",
+        "javascript",
+        "git"
       ],
       "demo_url": "http://z-skore.pribyla.com/",
       "html_url": "https://github.com/zdenekpribyla/z-score-calculator",
@@ -144,9 +153,9 @@
       "name": "Z Score Convert Calculator",
       "full_name": "zdenekpribyla/z-score-convert",
       "tags": [
-        "Html",
-        "JavaScript",
-        "GIT"
+        "html",
+        "javascript",
+        "git"
       ],
       "demo_url": "http://z-convert.pribyla.com",
       "html_url": "https://github.com/zdenekpribyla/z-score-convert",
@@ -157,10 +166,10 @@
       "name": "one-click-more-link",
       "full_name": "zdenekpribyla/one-click-more-link",
       "tags": [
-        "Html",
-        "JavaScript",
-        "jQuery",
-        "GIT"
+        "html",
+        "javascript",
+        "jquery",
+        "git"
       ],
       "demo_url": "",
       "html_url": "https://github.com/zdenekpribyla/one-click-more-link",
@@ -169,13 +178,13 @@
     {
       "name": "Affiliate Sites",
       "tags": [
-        "Html",
-        "CSS",
-        "JavaScript",
-        "jQuery",
-        "Responsive Design",
-        "SEO",
-        "goHugo"
+        "html",
+        "css",
+        "javascript",
+        "jquery",
+        "responsivedesign",
+        "seo",
+        "hugo"
       ],
       "description": "High profitable affiliate websites. Focused on specific product niche. Content is formed by comparing tables and lots of long product reviews. It is based on Hugo static generator (originally on Wordpress) and design is styled by own css (no predefined themeplate). There is a height level of SEO and linkbuilding used to get visitors from SERP. Also smart UX leads to high click-through rate on affiliate links.",
       "html_url": "",
@@ -184,13 +193,13 @@
     {
       "name": "Pro-vital.cz",
       "tags": [
-        "Html",
-        "CSS",
-        "JavaScript",
-        "jQuery",
-        "goHugo",
-        "Responsive Design",
-        "SEO"
+        "html",
+        "css",
+        "javascript",
+        "jquery",
+        "hugo",
+        "responsivedesign",
+        "seo"
       ],
       "description": "Company website presentation based on goHugo static generator and getBootstrap. Beta version is hosted in Firebase. SEO for main keywords is optimized and ranking 1# on google.",
       "html_url": "https://github.com/zdenekpribyla/pro-vital",
@@ -199,11 +208,11 @@
     {
       "name": "Eshop vasekravaty.cz",
       "tags": [
-        "Html",
-        "CSS",
-        "Responsive Design",
-        "JavaScript",
-        "SEO"
+        "html",
+        "css",
+        "responsivedesign",
+        "javascript",
+        "seo"
       ],
       "description": "Eshop with ties and bow ties. Eshop is based on rented eshop-rychle platform but there is lots of own design modification via css. There are used some own scripts (tie color navigation, price benefits, redirect to homepage). Project focuses on high quality SEO + linkbuilding and visitors from SERP.",
       "html_url": "",

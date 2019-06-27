@@ -38,16 +38,25 @@ var footerStarsGenerator = function (number) {
     }
 };
 
-var filterAndProjectTagsGenerator = function (tags, className) {
+var filterAndProjectTagsGenerator = function (tags, className, skills) {
 
     var projectTags = '';
     tags.forEach(function (singleTag) {
 
         if (typeof singleTag === 'object') {
             singleTag = singleTag.name
+            console.log(singleTag)
+            projectTags = projectTags + '<div class="' + className + '"' + ' id="' + singleTag + '">' + singleTag + '</div>'
         }
-
-        projectTags = projectTags + '<div class="' + className + '"' + ' id="' + singleTag + '">' + singleTag + '</div>'
+        else {
+            skills.forEach(function(skillName) {
+                
+                if (singleTag === skillName.id) {
+                    projectTags = projectTags + '<div class="' + className + '"' + ' id="' + singleTag + '">' + skillName.name + '</div>'
+                }
+            })
+        
+        }
     });
     return projectTags
 };
@@ -114,16 +123,16 @@ $(document).ready(function () {
         });
 
         $('.filter__input-tag').append(
-            filterAndProjectTagsGenerator(data.mySkills, 'filter__tag')
+            filterAndProjectTagsGenerator(data.mySkills, 'filter__tag', '')
         );
 
         $('.filter__tag').mouseenter(function(){  
             $(this).addClass('false--hover'); 
-            console.log('go to the tag') 
+            
         }); 
         $('.filter__tag').mouseout(function(){  
             $(this).removeClass('false--hover');
-            console.log('quit the tag')  
+              
         });
          
 
@@ -143,7 +152,7 @@ $(document).ready(function () {
                 '<div class="project__details">' +
                 projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
                 projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
-                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single', data.mySkills) + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                 '</div>');
 
         });
