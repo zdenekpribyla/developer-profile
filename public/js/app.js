@@ -44,9 +44,7 @@ var filterAndProjectTagsGenerator = function (tags, className, skills) {
     tags.forEach(function (singleTag) {
 
         if (typeof singleTag === 'object') {
-            singleTag = singleTag.name
-            console.log(singleTag)
-            projectTags = projectTags + '<div class="' + className + '"' + ' id="' + singleTag + '">' + singleTag + '</div>'
+            projectTags = projectTags + '<div class="' + className + '"' + ' id="filter-' + singleTag.id + '">' + singleTag.name + '</div>'
         }
         else {
             skills.forEach(function(skillName) {
@@ -182,7 +180,7 @@ $(document).ready(function () {
                         '<div class="project__details">' +
                         projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
                         projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
-                        '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                        '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' + filterAndProjectTagsGenerator(project.tags, 'project__tag-single', data.mySkills) + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                         '</div>');
                 })
             }
@@ -214,7 +212,7 @@ $(document).ready(function () {
 
                         project.tags.forEach(function (singleTag) {
 
-                            if (singleTag === that.attr('id')) {
+                            if ('filter-' + singleTag === that.attr('id')) {
                                 //console.log(singleProject);
                                 $('.main__list').append(
                                     '<div class="project">' +
@@ -224,7 +222,7 @@ $(document).ready(function () {
                                     projectDetailUrlGenerator("project__single-detail", "fa-github-alt", "project__single-detail__span", " GitHub", "link", project.html_url) +
                                     projectDetailUrlGenerator("project__single-detail", "fa-link", "project__single-detail__span", " url", "link", project.demo_url) +
                                     '<div class="project_tag"><i class="fa fa-trophy"></i><span class="project__single-detail__span">  Used Skills  </span>' +
-                                    filterAndProjectTagsGenerator(project.tags, 'project__tag-single') + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
+                                    filterAndProjectTagsGenerator(project.tags, 'project__tag-single', data.mySkills) + '</div></div>' + '<div class="project__btn"><i class="fa fa-caret-down project__btn-open fa-2x" aria-hidden="true"></i></div>' +
                                     '</div>');
 
                             }
